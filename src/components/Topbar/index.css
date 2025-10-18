@@ -1,0 +1,21 @@
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 80px;
+}
+
+.topBar > * {
+  display: flex;
+  width: 100%;
+}
+
+.logoBar {
+  display: flex;
+  justify-content: left;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
