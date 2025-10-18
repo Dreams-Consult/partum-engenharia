@@ -1,0 +1,17 @@
+.Testimonials {
+  margin-top: 100px;
+  display: flex;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}

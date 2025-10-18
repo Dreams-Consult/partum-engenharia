@@ -1,12 +1,11 @@
 import './index.css'
-// import ReactComponent
 import PartumLogo from '../../assets/partum.svg';
 
 function Topbar () {
   return (
     <div className='topBar'>
       <div className='logoBar'>
-        <img src={PartumLogo} alt='Logotipo do App' />
+        <img src={PartumLogo} alt='Logo' width="100" height="100" />
       </div>
       <div className='navBar'>
         <a>Home</a>
