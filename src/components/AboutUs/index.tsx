@@ -3,7 +3,7 @@ import { Card } from "../Card"
 
 function AboutUs () {
   return (
-    <>
+    <div className='AboutUs'>
       <h1>Quem somos?</h1>
       <h3>Somos uma empresa de engenharia experiente, sediada em São José do Rio Preto – SP, especializada na criação e construção de Parques aquáticos e Resorts, atrações como Piscina de ondas, Rio lento, Piscinas Kids e Toboáguas e Piscinas Tematizadas.</h3>
       <div className="Skill">
@@ -11,12 +11,12 @@ function AboutUs () {
         <Card />
         <Card />
       </div>
-      <div className="Skill" style={{'marginTop': '100px'}}>
+      <div className="Skill">
         <Card />
         <Card />
         <Card />
       </div>
-    </>
+    </div>
   )
 }
 
