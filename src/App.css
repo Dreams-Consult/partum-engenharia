@@ -6,3 +6,23 @@
   padding-bottom: 3rem;
   text-align: center;
 }
+
+.whatsapp-icon {
+  position: fixed;         /* fixa o ícone na tela, mesmo ao rolar */
+  bottom: 20px;            /* distância da borda inferior */
+  right: 20px;             /* distância da borda direita */
+  z-index: 1000;           /* garante que fique sobre outros elementos */
+  width: 60px;             /* tamanho do botão */
+  height: 60px;
+  border-radius: 50%;      /* formato circular */
+  display: flex;           /* centraliza o ícone */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombreamento elegante */
+  cursor: pointer;         /* muda o cursor ao passar o mouse */
+  transition: transform 0.2s ease; /* animação leve */
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);   /* efeito de zoom ao passar o mouse */
+}
