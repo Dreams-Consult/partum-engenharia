@@ -27,7 +27,8 @@ function Projects () {
 
   return (
     <div className='Projects'>
-      <h2>Confira abaixo</h2>
+      <div>
+        <h2>Confira abaixo</h2>
       <h1>ALGUNS DE NOSSOS PROJETOS</h1>
       <div>
         <Carousel
@@ -52,6 +53,37 @@ function Projects () {
               <Card />
             </div>
         </Carousel>
+      </div>
+      </div>
+
+      <div>
+        <h1>OUTROS PROJETOS</h1>
+      <h3>Atuamos em diversos outros projetos pelo Brasil como do Amai Park em Rio Branco no Acre, Vale das Águas Park em Pitanga no Paraná e Águas de Olimpia em Olimpia-SP, sempre buscando a melhor solução visando qualidade para os usuários e menor custo de manutenção e operação para o Parque e Resort.</h3>
+      <h2>OBRAS EM ANDAMENTO</h2>
+      <div>
+        <Carousel
+          centerMode
+          infinite
+          focusOnSelect
+          responsive={responsive}>
+
+            <div>
+              <Card />
+            </div>
+            <div>
+              <Card />
+            </div>
+            <div>
+              <Card />
+            </div>
+            <div>
+              <Card />
+            </div>
+            <div>
+              <Card />
+            </div>
+        </Carousel>
+      </div>
       </div>
     </div>
   )
