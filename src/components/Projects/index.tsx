@@ -2,6 +2,7 @@ import './index.css'
 import 'react-multi-carousel/lib/styles.css'
 import Carousel from 'react-multi-carousel'
 import { BREAKPOINTS } from '../../constants'
+import BgProjetos from '../../assets/BG-PROJETOS.svg'
 
 const CAROUSEL_RESPONSIVE = {
   desktop: {
@@ -83,7 +84,7 @@ const CustomDot = ({ onClick, active }: { onClick?: () => void; active?: boolean
 
 function Projects() {
   return (
-    <div className='projects-section' id='projects'>
+    <div className='projects-section' id='projects' style={{ backgroundImage: `url(${BgProjetos})` }}>
       <div className='projects-container'>
         <h2 className='projects-title'>CONHEÇA NOSSOS PROJETOS</h2>
 
