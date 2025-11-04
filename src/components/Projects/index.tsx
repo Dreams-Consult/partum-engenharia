@@ -1,64 +1,123 @@
 import './index.css'
 import 'react-multi-carousel/lib/styles.css'
 import Carousel from 'react-multi-carousel'
-import { Card } from '../Card'
 import { BREAKPOINTS } from '../../constants'
 
 const CAROUSEL_RESPONSIVE = {
   desktop: {
     breakpoint: BREAKPOINTS.desktop,
-    items: 2
+    items: 3,
+    slidesToSlide: 1
+  },
+  tablet: {
+    breakpoint: BREAKPOINTS.tablet,
+    items: 2,
+    slidesToSlide: 1
   },
   mobile: {
     breakpoint: BREAKPOINTS.mobile,
-    items: 1
+    items: 1,
+    slidesToSlide: 1
   }
 }
 
-const PROJECTS_DESCRIPTION = 'Atuamos em diversos outros projetos pelo Brasil como do Amai Park em Rio Branco no Acre, Vale das Águas Park em Pitanga no Paraná e Águas de Olimpia em Olimpia-SP, sempre buscando a melhor solução visando qualidade para os usuários e menor custo de manutenção e operação para o Parque e Resort.'
+interface Project {
+  id: number
+  name: string
+  location: string
+  gradient: string
+}
 
-const CARD_COUNT = 5
+const PROJECTS: Project[] = [
+  {
+    id: 1,
+    name: 'Guará Acqua Park',
+    location: 'Castanhal - Pará',
+    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  },
+  {
+    id: 2,
+    name: 'Aqualand Resort',
+    location: 'Salinópolis - Pará',
+    gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+  },
+  {
+    id: 3,
+    name: 'Isla Cancun Resort',
+    location: 'Cardoso - SP',
+    gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+  },
+  {
+    id: 4,
+    name: 'Amai Park',
+    location: 'Rio Branco - Acre',
+    gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
+  },
+  {
+    id: 5,
+    name: 'Vale das Águas Park',
+    location: 'Pitanga - Paraná',
+    gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
+  }
+]
+
+const CustomLeftArrow = ({ onClick }: { onClick?: () => void }) => (
+  <button className='custom-arrow custom-left-arrow' onClick={onClick} aria-label='Anterior'>
+    ‹
+  </button>
+)
+
+const CustomRightArrow = ({ onClick }: { onClick?: () => void }) => (
+  <button className='custom-arrow custom-right-arrow' onClick={onClick} aria-label='Próximo'>
+    ›
+  </button>
+)
+
+const CustomDot = ({ onClick, active }: { onClick?: () => void; active?: boolean }) => (
+  <button
+    className={`custom-dot ${active ? 'active' : ''}`}
+    onClick={onClick}
+    aria-label='Indicador do carrossel'
+  />
+)
 
 function Projects() {
-  const renderCards = () => {
-    return Array.from({ length: CARD_COUNT }, (_, index) => (
-      <div key={`card-${index}`}>
-        <Card />
-      </div>
-    ))
-  }
-
   return (
-    <div className='Projects' id="projects">
-      <div>
-        <h2>Confira abaixo</h2>
-        <h1>ALGUNS DE NOSSOS PROJETOS</h1>
-
-        <div>
+    <div className='projects-section' id='projects'>
+      <div className='projects-container'>
+        <h2 className='projects-title'>CONHEÇA NOSSOS PROJETOS</h2>
+        
+        <div className='projects-carousel-wrapper'>
           <Carousel
-            centerMode
-            infinite
-            focusOnSelect
             responsive={CAROUSEL_RESPONSIVE}
-          >
-            {renderCards()}
-          </Carousel>
-        </div>
-      </div>
-
-      <div>
-        <h1>OUTROS PROJETOS</h1>
-        <h3>{PROJECTS_DESCRIPTION}</h3>
-
-        <h2>OBRAS EM ANDAMENTO</h2>
-        <div>
-          <Carousel
-            centerMode
             infinite
-            focusOnSelect
-            responsive={CAROUSEL_RESPONSIVE}
+            autoPlay
+            autoPlaySpeed={3000}
+            keyBoardControl
+            customTransition='transform 500ms ease-in-out'
+            transitionDuration={500}
+            containerClass='carousel-container'
+            removeArrowOnDeviceType={['mobile']}
+            itemClass='carousel-item'
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
+            showDots
+            renderDotsOutside
+            customDot={<CustomDot />}
           >
-            {renderCards()}
+            {PROJECTS.map((project) => (
+              <div key={project.id} className='project-card'>
+                <div 
+                  className='project-image'
+                  style={{ background: project.gradient }}
+                >
+                  <div className='project-overlay'>
+                    <h3 className='project-name'>{project.name}</h3>
+                    <p className='project-location'>{project.location}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </Carousel>
         </div>
       </div>

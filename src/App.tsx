@@ -28,9 +28,9 @@ function App() {
 
       <Topbar />
       <Home />
+      <Projects />
       <AboutUs />
       <Testimonials />
-      <Projects />
       <Contact />
     </>
   )

@@ -1,6 +1,280 @@
-.Projects {
+.projects-section {
+  background: linear-gradient(to bottom, rgba(16, 36, 68, 0.95), rgba(16, 36, 68, 0.85));
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.projects-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.projects-carousel-wrapper {
+  position: relative;
+  padding: 0 60px;
+}
+
+.carousel-container {
+  overflow: visible;
+}
+
+.carousel-item {
+  padding: 0 15px;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  height: 350px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 200px;
-  margin-top: 200px;
+  align-items: flex-end;
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), transparent);
+  padding: 30px 20px;
+  transform: translateY(0);
+  transition: all 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.7));
+}
+
+.project-name {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.project-location {
+  color: #4a9fd8;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Setas de navegação customizadas */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(74, 159, 216, 0.9);
+  border: none;
+  color: #ffffff;
+  font-size: 3rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.custom-arrow:hover {
+  background: #4a9fd8;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.custom-left-arrow {
+  left: 0;
+}
+
+.custom-right-arrow {
+  right: 0;
+}
+
+/* Indicadores (dots) customizados */
+.react-multi-carousel-dot-list {
+  bottom: -50px;
+  gap: 10px;
+}
+
+.custom-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  margin: 0 5px;
+}
+
+.custom-dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(1.2);
+}
+
+.custom-dot.active {
+  background: #4a9fd8;
+  border-color: #ffffff;
+  width: 14px;
+  height: 14px;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+  .projects-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .projects-carousel-wrapper {
+    padding: 0 50px;
+  }
+
+  .project-card {
+    height: 300px;
+  }
+
+  .project-name {
+    font-size: 1.2rem;
+  }
+
+  .project-location {
+    font-size: 0.9rem;
+  }
+
+  .custom-arrow {
+    font-size: 2.5rem;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Responsividade para tablets pequenos */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 60px 0;
+  }
+
+  .projects-container {
+    padding: 0 20px;
+  }
+
+  .projects-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .projects-carousel-wrapper {
+    padding: 0 10px;
+  }
+
+  .project-card {
+    height: 280px;
+  }
+
+  .custom-arrow {
+    display: none;
+  }
+
+  .carousel-item {
+    padding: 0 10px;
+  }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 40px 0;
+  }
+
+  .projects-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .project-card {
+    height: 250px;
+  }
+
+  .project-overlay {
+    padding: 20px 15px;
+  }
+
+  .project-name {
+    font-size: 1.1rem;
+  }
+
+  .project-location {
+    font-size: 0.85rem;
+  }
+
+  .react-multi-carousel-dot-list {
+    bottom: -40px;
+  }
+
+  .custom-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .custom-dot.active {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Responsividade para smartphones muito pequenos */
+@media (max-width: 360px) {
+  .projects-title {
+    font-size: 1.3rem;
+  }
+
+  .project-card {
+    height: 220px;
+  }
+
+  .project-name {
+    font-size: 1rem;
+  }
+
+  .project-location {
+    font-size: 0.8rem;
+  }
 }
