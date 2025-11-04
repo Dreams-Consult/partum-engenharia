@@ -11,21 +11,21 @@ import { WHATSAPP_URL } from './constants'
 function App() {
   return (
     <>
-      <a 
-        href={WHATSAPP_URL} 
-        target='_blank' 
+      <a
+        href={WHATSAPP_URL}
+        target='_blank'
         rel='noopener noreferrer'
         aria-label='Contato via WhatsApp'
       >
-        <img 
-          className='whatsapp-icon' 
-          src={LogoWhatsapp} 
-          alt='WhatsApp' 
-          width="50" 
-          height="50" 
+        <img
+          className='whatsapp-icon'
+          src={LogoWhatsapp}
+          alt='WhatsApp'
+          width="50"
+          height="50"
         />
       </a>
-      
+
       <Topbar />
       <Home />
       <AboutUs />

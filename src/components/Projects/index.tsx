@@ -33,7 +33,7 @@ function Projects() {
       <div>
         <h2>Confira abaixo</h2>
         <h1>ALGUNS DE NOSSOS PROJETOS</h1>
-        
+
         <div>
           <Carousel
             centerMode
@@ -49,7 +49,7 @@ function Projects() {
       <div>
         <h1>OUTROS PROJETOS</h1>
         <h3>{PROJECTS_DESCRIPTION}</h3>
-        
+
         <h2>OBRAS EM ANDAMENTO</h2>
         <div>
           <Carousel

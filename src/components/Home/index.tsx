@@ -26,34 +26,41 @@ const CAROUSEL_SLIDES: CarouselSlide[] = [
   {
     id: 'slide-1',
     className: 'slide-original',
-    welcome: 'Bem-vindo a',
-    title: 'PARTUM ENGENHARIA',
-    subtitle: 'Sua parceira especializada em projeto e construção de<br />parques aquáticos e resorts.'
+    welcome: '',
+    title: 'Projetamos o futuro do lazer no Brasil.',
+    subtitle: 'Descubra o que podemos construir juntos'
   },
   {
     id: 'slide-2',
     className: 'slide-2',
-    welcome: 'Excelência em',
-    title: 'ENGENHARIA',
-    subtitle: 'Transformamos sonhos em realidade com<br />projetos inovadores e sustentáveis'
+    welcome: '',
+    title: 'Excelência em Engenharia',
+    subtitle: 'Transformamos sonhos em realidade com projetos inovadores'
   },
   {
     id: 'slide-3',
     className: 'slide-3',
-    welcome: 'Especialistas em',
-    title: 'PARQUES AQUÁTICOS',
-    subtitle: 'Criando experiências inesquecíveis com<br />segurança e inovação'
+    welcome: '',
+    title: 'Especialistas em Parques Aquáticos',
+    subtitle: 'Criando experiências inesquecíveis com segurança e inovação'
   },
   {
     id: 'slide-4',
     className: 'slide-4',
-    welcome: 'Projetos de',
-    title: 'RESORTS DE LUXO',
-    subtitle: 'Soluções personalizadas com os mais<br />altos padrões de qualidade'
+    welcome: '',
+    title: 'Projetos de Resorts de Luxo',
+    subtitle: 'Soluções personalizadas com os mais altos padrões de qualidade'
   }
 ]
 
 function Home() {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className="home-carousel-wrapper" id="home">
       <Carousel
@@ -76,12 +83,16 @@ function Home() {
           <div key={slide.id} className={`home-section ${slide.className}`}>
             <div className="home-overlay" />
             <div className="home-content">
-              <h3 className="home-welcome">{slide.welcome}</h3>
+              {slide.welcome && <h3 className="home-welcome">{slide.welcome}</h3>}
               <h1 className="home-title">{slide.title}</h1>
-              <p 
-                className="home-subtitle"
-                dangerouslySetInnerHTML={{ __html: slide.subtitle }}
-              />
+              <p className="home-subtitle">{slide.subtitle}</p>
+              <button
+                className="home-cta-button"
+                onClick={scrollToContact}
+                type="button"
+              >
+                Solicite um projeto
+              </button>
             </div>
           </div>
         ))}

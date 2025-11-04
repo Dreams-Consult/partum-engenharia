@@ -18,7 +18,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -52,17 +52,18 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
 .home-content {
   position: relative;
   z-index: 2;
-  text-align: center;
+  text-align: left;
   color: #ffffff;
-  max-width: 1200px;
+  max-width: 600px;
   padding: 2rem;
+  margin-left: 100px;
   animation: fadeInContent 1s ease-in;
 }
 
@@ -88,26 +89,48 @@
 }
 
 .home-title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   margin: 1rem 0;
-  text-transform: uppercase;
-  color: #ffffff;
+  color: #4a9fd8;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
   line-height: 1.2;
 }
 
 .home-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.6;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.home-cta-button {
+  background: #4a9fd8;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  box-shadow: 0 4px 15px rgba(74, 159, 216, 0.4);
+  margin-top: 1rem;
+}
+
+.home-cta-button:hover {
+  background: #3a8bc0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 159, 216, 0.6);
+}
+
+.home-cta-button:active {
+  transform: translateY(0);
 }
 
 /* Customização dos dots do carrossel */
@@ -154,16 +177,21 @@
     min-height: 80vh;
   }
 
+  .home-content {
+    margin-left: 50px;
+  }
+
   .home-title {
     font-size: 3rem;
   }
 
-  .home-welcome {
-    font-size: 1.3rem;
+  .home-subtitle {
+    font-size: 1rem;
   }
 
-  .home-subtitle {
-    font-size: 1.1rem;
+  .home-cta-button {
+    padding: 10px 25px;
+    font-size: 0.95rem;
   }
 }
 
@@ -176,29 +204,23 @@
   .home-section {
     min-height: 70vh;
     background-position: 30% center;
+    justify-content: center;
   }
 
   .home-content {
     padding: 1.5rem;
+    margin-left: 0;
+    text-align: center;
+    max-width: 90%;
   }
 
   .home-title {
     font-size: 2.5rem;
-    letter-spacing: 2px;
-  }
-
-  .home-welcome {
-    font-size: 1.1rem;
-    letter-spacing: 1.5px;
   }
 
   .home-subtitle {
     font-size: 1rem;
     line-height: 1.5;
-  }
-
-  .home-subtitle br {
-    display: none;
   }
 
   .home-carousel .react-multiple-carousel__arrow {
@@ -224,20 +246,19 @@
 
   .home-title {
     font-size: 1.8rem;
-    letter-spacing: 1px;
     margin: 0.5rem 0;
-  }
-
-  .home-welcome {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    margin-bottom: 0.3rem;
   }
 
   .home-subtitle {
     font-size: 0.9rem;
     line-height: 1.4;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 
   .home-carousel .react-multiple-carousel__arrow {
@@ -257,11 +278,12 @@
     font-size: 1.5rem;
   }
 
-  .home-welcome {
-    font-size: 0.8rem;
+  .home-subtitle {
+    font-size: 0.85rem;
   }
 
-  .home-subtitle {
+  .home-cta-button {
+    padding: 8px 18px;
     font-size: 0.85rem;
   }
 
