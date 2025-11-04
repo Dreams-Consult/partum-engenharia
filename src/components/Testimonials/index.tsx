@@ -1,17 +1,20 @@
-import { Card } from '../Card'
 import './index.css'
+import { Card } from '../Card'
 
-function Testimonials () {
+const TESTIMONIALS_TITLE = 'POR QUE ESCOLHER A Partum Engenharia?'
+const TESTIMONIALS_TEXT = 'Com nossa equipe altamente qualificada, conhecimento técnico e compromisso com a excelência, garantimos que seu parque aquático seja construído com qualidade, segurança e inovação.'
+
+function Testimonials() {
   return (
-    <div className='Testimonials'>
+    <div className='Testimonials' id="testimonials">
       <div className='left'>
         <div>
-          <h1>POR QUE ESCOLHER A
-Partum Engenharia?</h1>
-          <h4>Com nossa equipe altamente qualificada, conhecimento técnico e compromisso com a excelência, garantimos que seu parque aquático seja construído com qualidade, segurança e inovação.</h4>
+          <h1>{TESTIMONIALS_TITLE}</h1>
+          <h4>{TESTIMONIALS_TEXT}</h4>
         </div>
         <Card />
       </div>
+
       <div className='right'>
         <Card />
         <Card />

@@ -1,15 +1,17 @@
-import { Card } from '../Card'
 import './index.css'
+import { Card } from '../Card'
 
-function Contact () {
+const CONTACT_TITLE = 'ENTRE EM CONTATO'
+const CONTACT_DESCRIPTION = 'Preencha o formulário abaixo, ou clique no ícone do WhatsApp no canto da tela para que possamos conversar'
+
+function Contact() {
   return (
-    <div className='Contact'>
-      <h1>ENTRE EM CONTATO</h1>
-      <h3>Preencha o formulário abaixo, ou clique no ícone do
-WhatsApp no canto da tela para que possamos conversar</h3>
+    <div className='Contact' id="contact">
+      <h1>{CONTACT_TITLE}</h1>
+      <h3>{CONTACT_DESCRIPTION}</h3>
       <Card />
     </div>
   )
 }
 
-export {  Contact }
+export { Contact }

@@ -1,0 +1,272 @@
+.home-carousel-wrapper {
+  width: 100%;
+  margin-top: 120px;
+  position: relative;
+}
+
+.home-carousel {
+  width: 100%;
+}
+
+.home-carousel-item {
+  width: 100%;
+}
+
+.home-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slide 1 - Banner original com a foto do rapaz */
+.slide-original {
+  background-image: url('../../assets/banner-site.png');
+}
+
+/* Slide 2 - Gradiente azul escuro */
+.slide-2 {
+  background: linear-gradient(135deg, #0056b8 0%, #00a8e8 100%);
+}
+
+/* Slide 3 - Gradiente azul médio */
+.slide-3 {
+  background: linear-gradient(135deg, #005a9c 0%, #0091d5 100%);
+}
+
+/* Slide 4 - Gradiente azul profundo */
+.slide-4 {
+  background: linear-gradient(135deg, #003d71 0%, #0086c8 100%);
+}
+
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  max-width: 1200px;
+  padding: 2rem;
+  animation: fadeInContent 1s ease-in;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-welcome {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-title {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+}
+
+.home-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Customização dos dots do carrossel */
+.home-carousel-dots {
+  bottom: 30px !important;
+  position: absolute;
+}
+
+.home-carousel-dots button {
+  border: 2px solid #ffffff !important;
+  background: transparent !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.home-carousel-dots .react-multi-carousel-dot--active button {
+  background: #ffffff !important;
+}
+
+/* Setas do carrossel */
+.home-carousel .react-multiple-carousel__arrow {
+  background: rgba(0, 0, 0, 0.5) !important;
+  min-width: 50px;
+  min-height: 50px;
+  z-index: 10;
+}
+
+.home-carousel .react-multiple-carousel__arrow:hover {
+  background: rgba(0, 168, 232, 0.8) !important;
+}
+
+.home-carousel .react-multiple-carousel__arrow::before {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+  .home-carousel-wrapper {
+    margin-top: 110px;
+  }
+
+  .home-section {
+    min-height: 80vh;
+  }
+
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .home-welcome {
+    font-size: 1.3rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsividade para tablets pequenos */
+@media (max-width: 768px) {
+  .home-carousel-wrapper {
+    margin-top: 100px;
+  }
+
+  .home-section {
+    min-height: 70vh;
+    background-position: 30% center;
+  }
+
+  .home-content {
+    padding: 1.5rem;
+  }
+
+  .home-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .home-welcome {
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .home-subtitle br {
+    display: none;
+  }
+
+  .home-carousel .react-multiple-carousel__arrow {
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+  .home-carousel-wrapper {
+    margin-top: 86px;
+  }
+
+  .home-section {
+    min-height: 60vh;
+    background-position: 25% center;
+  }
+
+  .home-content {
+    padding: 1rem;
+  }
+
+  .home-title {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin: 0.5rem 0;
+  }
+
+  .home-welcome {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+  }
+
+  .home-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-top: 1rem;
+  }
+
+  .home-carousel .react-multiple-carousel__arrow {
+    min-width: 35px;
+    min-height: 35px;
+  }
+
+  .home-carousel-dots button {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+/* Responsividade para smartphones muito pequenos */
+@media (max-width: 360px) {
+  .home-title {
+    font-size: 1.5rem;
+  }
+
+  .home-welcome {
+    font-size: 0.8rem;
+  }
+
+  .home-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .home-carousel .react-multiple-carousel__arrow {
+    min-width: 30px;
+    min-height: 30px;
+  }
+}

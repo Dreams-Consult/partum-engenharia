@@ -16,8 +16,6 @@
 body {
   margin: 0;
   display: flex;
-  padding: 2rem;
-  /* place-items: center; */
-  /* min-width: 320px; */
+  padding: 0;
   min-height: 100vh;
 }
