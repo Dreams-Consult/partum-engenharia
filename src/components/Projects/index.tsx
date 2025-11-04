@@ -4,6 +4,12 @@ import Carousel from 'react-multi-carousel'
 import { BREAKPOINTS } from '../../constants'
 import BgProjetos from '../../assets/BG-PROJETOS.svg'
 
+// Importando imagens dos projetos
+import GuaraImg from '../../assets/projects/Guará Acqua Park/GUA-IMG-01.jpg'
+import AqualandImg from '../../assets/projects/Aqualand Resort/AQL-IMG-001.jpeg'
+import IslaCancunImg from '../../assets/projects/Isla Cancun/ISC-IMG-001.jpeg'
+import ValeCachoeirasImg from '../../assets/projects/Vale das Cachoeiras/VLC-IMG-002.jpg'
+
 const CAROUSEL_RESPONSIVE = {
   desktop: {
     breakpoint: BREAKPOINTS.desktop,
@@ -26,7 +32,7 @@ interface Project {
   id: number
   name: string
   location: string
-  gradient: string
+  image: string
 }
 
 const PROJECTS: Project[] = [
@@ -34,31 +40,25 @@ const PROJECTS: Project[] = [
     id: 1,
     name: 'Guará Acqua Park',
     location: 'Castanhal - Pará',
-    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+    image: GuaraImg
   },
   {
     id: 2,
     name: 'Aqualand Resort',
     location: 'Salinópolis - Pará',
-    gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+    image: AqualandImg
   },
   {
     id: 3,
     name: 'Isla Cancun Resort',
     location: 'Cardoso - SP',
-    gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+    image: IslaCancunImg
   },
   {
     id: 4,
-    name: 'Amai Park',
-    location: 'Rio Branco - Acre',
-    gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
-  },
-  {
-    id: 5,
     name: 'Vale das Águas Park',
     location: 'Pitanga - Paraná',
-    gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
+    image: ValeCachoeirasImg
   }
 ]
 
@@ -114,7 +114,12 @@ function Projects() {
               <div key={project.id} className='project-card'>
                 <div
                   className='project-image'
-                  style={{ background: project.gradient }}
+                  style={{ 
+                    backgroundImage: `url(${project.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                  }}
                 >
                   <div className='project-overlay'>
                     <h3 className='project-name'>{project.name}</h3>
