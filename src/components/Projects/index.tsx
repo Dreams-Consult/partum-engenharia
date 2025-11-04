@@ -86,7 +86,7 @@ function Projects() {
     <div className='projects-section' id='projects'>
       <div className='projects-container'>
         <h2 className='projects-title'>CONHEÇA NOSSOS PROJETOS</h2>
-        
+
         <div className='projects-carousel-wrapper'>
           <Carousel
             responsive={CAROUSEL_RESPONSIVE}
@@ -107,7 +107,7 @@ function Projects() {
           >
             {PROJECTS.map((project) => (
               <div key={project.id} className='project-card'>
-                <div 
+                <div
                   className='project-image'
                   style={{ background: project.gradient }}
                 >

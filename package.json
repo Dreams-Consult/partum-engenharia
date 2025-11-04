@@ -9,7 +9,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "aws s3 sync dist/ s3://engenhariapartum.com.br"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "aws-deploy": "aws s3 sync dist/ s3://engenhariapartum.com.br"
   },
   "dependencies": {
     "react": "^19.1.1",
