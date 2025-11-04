@@ -93,7 +93,7 @@
   font-weight: 700;
   letter-spacing: 1px;
   margin: 1rem 0;
-  color: #4a9fd8;
+  color: white;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
   line-height: 1.2;
 }
@@ -104,13 +104,13 @@
   line-height: 1.6;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  color: #292f33;
+  color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .home-cta-button {
   background: #4a9fd8;
-  color: #292f33;
+  color: white;
   border: none;
   padding: 12px 30px;
   font-size: 1.5rem;

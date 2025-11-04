@@ -91,10 +91,10 @@ function Projects() {
         <div className='projects-carousel-wrapper'>
           <Carousel
             responsive={CAROUSEL_RESPONSIVE}
-            infinite
-            autoPlay
+            infinite={true}
+            autoPlay={true}
             autoPlaySpeed={3000}
-            keyBoardControl
+            keyBoardControl={true}
             customTransition='transform 500ms ease-in-out'
             transitionDuration={500}
             containerClass='carousel-container'
@@ -102,9 +102,13 @@ function Projects() {
             itemClass='carousel-item'
             customLeftArrow={<CustomLeftArrow />}
             customRightArrow={<CustomRightArrow />}
-            showDots
-            renderDotsOutside
+            showDots={true}
+            renderDotsOutside={true}
             customDot={<CustomDot />}
+            pauseOnHover={true}
+            shouldResetAutoplay={false}
+            rewind={false}
+            rewindWithAnimation={false}
           >
             {PROJECTS.map((project) => (
               <div key={project.id} className='project-card'>

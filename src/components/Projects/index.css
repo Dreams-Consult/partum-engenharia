@@ -39,11 +39,14 @@
 
 .projects-carousel-wrapper {
   position: relative;
-  padding: 0 60px;
+  padding: 0;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .carousel-container {
   overflow: visible;
+  padding: 0 70px;
 }
 
 .carousel-item {
@@ -180,7 +183,12 @@
   }
 
   .projects-carousel-wrapper {
-    padding: 0 50px;
+    padding: 0;
+    max-width: 900px;
+  }
+
+  .carousel-container {
+    padding: 0 60px;
   }
 
   .project-card {
@@ -200,6 +208,14 @@
     width: 45px;
     height: 45px;
   }
+
+  .custom-left-arrow {
+    left: 0;
+  }
+
+  .custom-right-arrow {
+    right: 0;
+  }
 }
 
 /* Responsividade para tablets pequenos */
@@ -218,6 +234,11 @@
   }
 
   .projects-carousel-wrapper {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .carousel-container {
     padding: 0 10px;
   }
 
