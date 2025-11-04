@@ -1,5 +1,5 @@
 import './index.css'
-import PartumLogo from '../../assets/partum.svg'
+import PartumLogo from '../../assets/SVG/LOGO-COR2-H2.svg'
 import type { NavItem } from '../../types'
 import { useState } from 'react'
 
@@ -34,7 +34,7 @@ function Topbar() {
   return (
     <nav className='topBar'>
       <div className='logoBar'>
-        <img src={PartumLogo} alt='Partum Engenharia' width="100" height="100" />
+        <img src={PartumLogo} alt='Partum Engenharia' width="200" height="100" />
       </div>
 
       <div className={`navBar ${isMenuOpen ? 'nav-open' : ''}`}>
