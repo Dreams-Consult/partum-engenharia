@@ -5,9 +5,9 @@ import { useState } from 'react'
 
 const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'Home' },
+  { id: 'projects', label: 'Projetos' },
   { id: 'about', label: 'A Partum' },
   { id: 'testimonials', label: 'Depoimentos' },
-  { id: 'projects', label: 'Projetos' },
   { id: 'contact', label: 'Contato' }
 ]
 
