@@ -3,10 +3,10 @@ import LogoWhatsapp from './assets/whatsapp-svgrepo-com.svg'
 import { Topbar } from './components/TopBar'
 import { Home } from './components/Home'
 import { Projects } from './components/Projects'
+import { AboutUs } from './components/AboutUs'
+import { Testimonials } from './components/Testimonials'
+import { Contact } from './components/Contact'
 import { WHATSAPP_URL } from './constants'
-// import { AboutUs } from './components/AboutUs'
-// import { Testimonials } from './components/Testimonials'
-// import { Contact } from './components/Contact'
 
 function App() {
   return (
@@ -29,9 +29,9 @@ function App() {
       <Topbar />
       <Home />
       <Projects />
-      {/* <AboutUs />
+      <AboutUs />
       <Testimonials />
-      <Contact /> */}
+      <Contact />
     </>
   )
 }
