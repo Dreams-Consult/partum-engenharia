@@ -1,36 +1,9 @@
 import './index.css'
-import { useState, FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
 
 const CONTACT_TITLE = 'Contato'
 const CONTACT_SUBTITLE = 'Estamos prontos para o seu desafio'
 const CONTACT_DESCRIPTION = 'Preencha o formulário e entre em contato e receba um atendimento especializado para o seu projeto. Ou entre em contato pelo whatsapp'
-
-interface ContactInfo {
-  icon: string
-  title: string
-  content: string
-  link?: string
-}
-
-const CONTACT_INFO: ContactInfo[] = [
-  {
-    icon: '📍',
-    title: 'Endereço',
-    content: 'Av. Romeu Strazzi, 325, Sala 622 - Vila Sinibaldi - São José do Rio Preto - SP'
-  },
-  {
-    icon: '📧',
-    title: 'E-mail',
-    content: 'contato@partumengenharia.com.br',
-    link: 'mailto:contato@partumengenharia.com.br'
-  },
-  {
-    icon: '📱',
-    title: 'Telefone',
-    content: '(17) 99775-1918',
-    link: 'tel:+5517997751918'
-  }
-]
 
 function Contact() {
   const [formData, setFormData] = useState({
