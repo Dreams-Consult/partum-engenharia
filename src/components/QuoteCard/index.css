@@ -1,0 +1,112 @@
+.quote-card {
+  background: linear-gradient(135deg, rgba(58, 96, 134, 0.4) 0%, #0D162B 100%);
+  border: 2px solid rgba(126, 196, 232, 0.35);
+  border-radius: 25px;
+  padding: 30px 28px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  overflow: visible;
+}
+
+.quote-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(126, 196, 232, 0.65);
+  background: linear-gradient(135deg, rgba(58, 96, 134, 0.5) 0%, #0D162B 100%);
+  box-shadow: 0 10px 30px rgba(126, 196, 232, 0.25);
+}
+
+.gradient-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, rgba(126, 196, 232, 0.18) 0%, rgba(100, 170, 210, 0.10) 35%, rgba(80, 140, 190, 0.04) 60%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(15px);
+}
+
+.gradient-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle at bottom right, rgba(126, 196, 232, 0.14) 0%, rgba(100, 170, 210, 0.08) 35%, rgba(80, 140, 190, 0.03) 60%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(15px);
+}
+
+.quote-icon {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 70px;
+  height: 48px;
+  z-index: 2;
+}
+
+.quote-icon img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.quote-text {
+  color: #e8f0f7;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  flex-grow: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.quote-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.author-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7ec4e8 0%, #4a9fd8 100%);
+  border: 2px solid rgba(126, 196, 232, 0.5);
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-name {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 3px 0;
+}
+
+.author-role {
+  color: #9db4cc;
+  font-size: 0.8rem;
+  margin: 0;
+  font-weight: 400;
+}

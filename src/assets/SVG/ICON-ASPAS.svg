@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 192 132">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Gradiente_sem_nome_50-2);
+        filter: url(#drop-shadow-6);
+      }
+
+      .cls-2 {
+        fill: url(#Gradiente_sem_nome_50);
+        filter: url(#drop-shadow-5);
+      }
+    </style>
+    <linearGradient id="Gradiente_sem_nome_50" data-name="Gradiente sem nome 50" x1="8.95" y1="59.25" x2="84.17" y2="59.25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5a9cca"/>
+      <stop offset="1" stop-color="#3d6a9b"/>
+    </linearGradient>
+    <filter id="drop-shadow-5" x="0" y="0" width="107" height="132" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#062333" flood-opacity=".5"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="Gradiente_sem_nome_50-2" data-name="Gradiente sem nome 50" x1="94.51" x2="169.73" xlink:href="#Gradiente_sem_nome_50"/>
+    <filter id="drop-shadow-6" x="86" y="0" width="106" height="132" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur-2" stdDeviation="5"/>
+      <feFlood flood-color="#062333" flood-opacity=".5"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="cls-2" d="M46.56,34.34c-2.16,0-4.28.19-6.35.54-1.16.2-2.18-.79-2-1.95,1.44-9.21,4.13-17.34,5.88-22.02.5-1.33-1.02-2.49-2.18-1.68C22.08,22.91,9.05,45.76,8.96,71.67c0,0,0,0,0,0,0,.09,0,.18,0,.28,0,21.26,17.64,38.4,39.07,37.58,19.49-.74,35.38-16.62,36.12-36.12.81-21.44-16.32-39.07-37.58-39.07Z"/>
+  <path class="cls-1" d="M132.12,34.34c-2.16,0-4.28.19-6.35.54-1.16.2-2.18-.79-2-1.95,1.44-9.21,4.13-17.34,5.88-22.02.5-1.33-1.02-2.49-2.18-1.68-19.84,13.69-32.87,36.54-32.96,62.45,0,0,0,0,0,0,0,.09,0,.18,0,.28,0,21.26,17.64,38.4,39.07,37.58,19.49-.74,35.38-16.62,36.12-36.12.81-21.44-16.32-39.07-37.58-39.07Z"/>
+</svg>

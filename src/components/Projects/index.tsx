@@ -2,7 +2,6 @@ import './index.css'
 import 'react-multi-carousel/lib/styles.css'
 import Carousel from 'react-multi-carousel'
 import { BREAKPOINTS } from '../../constants'
-import BgProjetos from '../../assets/BG-PROJETOS.svg'
 
 // Importando imagens dos projetos
 import GuaraImg from '../../assets/projects/Guará Acqua Park/GUA-IMG-01.jpg'
@@ -84,9 +83,10 @@ const CustomDot = ({ onClick, active }: { onClick?: () => void; active?: boolean
 
 function Projects() {
   return (
-    <div className='projects-section' id='projects' style={{ backgroundImage: `url(${BgProjetos})` }}>
+    <div className='projects-section' id='projects'>
       <div className='projects-container'>
-        <h2 className='projects-title'>CONHEÇA NOSSOS PROJETOS</h2>
+        <h2 className='projects-title'>Nossos Projetos</h2>
+        <p className='projects-subtitle'>Construindo experiências memoráveis</p>
 
         <div className='projects-carousel-wrapper'>
           <Carousel

@@ -1,4 +1,4 @@
-export const WHATSAPP_URL = 'https://wa.me/5517996542563?text=Olá+gostaria+de+saber+mais+sobre+o+serviço.'
+export const WHATSAPP_URL = 'https://wa.me/5517997751918?text=Olá+gostaria+de+saber+mais+sobre+o+serviço.'
 
 export const CAROUSEL_CONFIG = {
   autoPlaySpeed: 5000,

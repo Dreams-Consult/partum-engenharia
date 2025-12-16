@@ -1,8 +1,9 @@
 import './index.css'
 import { useState, FormEvent } from 'react'
 
-const CONTACT_TITLE = 'ENTRE EM CONTATO'
-const CONTACT_DESCRIPTION = 'Preencha o formulário abaixo ou clique no ícone do WhatsApp no canto da tela para entrarmos em contato com você'
+const CONTACT_TITLE = 'Contato'
+const CONTACT_SUBTITLE = 'Estamos prontos para o seu desafio'
+const CONTACT_DESCRIPTION = 'Preencha o formulário e entre em contato e receba um atendimento especializado para o seu projeto. Ou entre em contato pelo whatsapp'
 
 interface ContactInfo {
   icon: string
@@ -15,7 +16,7 @@ const CONTACT_INFO: ContactInfo[] = [
   {
     icon: '📍',
     title: 'Endereço',
-    content: 'São José do Rio Preto - SP'
+    content: 'Av. Romeu Strazzi, 325, Sala 622 - Vila Sinibaldi - São José do Rio Preto - SP'
   },
   {
     icon: '📧',
@@ -26,8 +27,8 @@ const CONTACT_INFO: ContactInfo[] = [
   {
     icon: '📱',
     title: 'Telefone',
-    content: '(17) 9999-9999',
-    link: 'tel:+5517999999999'
+    content: '(17) 99775-1918',
+    link: 'tel:+5517997751918'
   }
 ]
 
@@ -36,7 +37,6 @@ function Contact() {
     name: '',
     email: '',
     phone: '',
-    subject: '',
     message: ''
   })
 
@@ -56,7 +56,6 @@ function Contact() {
         name: '',
         email: '',
         phone: '',
-        subject: '',
         message: ''
       })
       setIsSubmitting(false)
@@ -74,27 +73,13 @@ function Contact() {
     <section className='contact-section' id='contact'>
       <div className='contact-container'>
         <h2 className='contact-title'>{CONTACT_TITLE}</h2>
+        <h3 className='contact-subtitle'>{CONTACT_SUBTITLE}</h3>
         <p className='contact-description'>{CONTACT_DESCRIPTION}</p>
 
         <div className='contact-content'>
-          <div className='contact-info'>
-            {CONTACT_INFO.map((info, index) => (
-              <div key={index} className='info-card'>
-                <div className='info-icon'>{info.icon}</div>
-                <h3 className='info-title'>{info.title}</h3>
-                {info.link ? (
-                  <a href={info.link} className='info-content'>{info.content}</a>
-                ) : (
-                  <p className='info-content'>{info.content}</p>
-                )}
-              </div>
-            ))}
-          </div>
-
           <form className='contact-form' onSubmit={handleSubmit}>
             <div className='form-row'>
               <div className='form-group'>
-                <label htmlFor='name'>Nome completo *</label>
                 <input
                   type='text'
                   id='name'
@@ -107,7 +92,6 @@ function Contact() {
               </div>
 
               <div className='form-group'>
-                <label htmlFor='email'>E-mail *</label>
                 <input
                   type='email'
                   id='email'
@@ -115,14 +99,11 @@ function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder='seu@email.com'
+                  placeholder='Seu Email'
                 />
               </div>
-            </div>
 
-            <div className='form-row'>
               <div className='form-group'>
-                <label htmlFor='phone'>Telefone *</label>
                 <input
                   type='tel'
                   id='phone'
@@ -130,33 +111,19 @@ function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  placeholder='(00) 00000-0000'
-                />
-              </div>
-
-              <div className='form-group'>
-                <label htmlFor='subject'>Assunto *</label>
-                <input
-                  type='text'
-                  id='subject'
-                  name='subject'
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  placeholder='Qual o motivo do contato?'
+                  placeholder='Seu Telefone'
                 />
               </div>
             </div>
 
             <div className='form-group'>
-              <label htmlFor='message'>Mensagem *</label>
               <textarea
                 id='message'
                 name='message'
                 value={formData.message}
                 onChange={handleChange}
                 required
-                placeholder='Conte-nos mais sobre seu projeto...'
+                placeholder='Mensagem'
                 rows={6}
               />
             </div>
@@ -166,9 +133,15 @@ function Contact() {
               className='submit-button'
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Enviando...' : 'Enviar mensagem'}
+              {isSubmitting ? 'Enviando...' : 'Enviar'}
             </button>
           </form>
+
+          <div className='contact-info'>
+            <div className='contact-phone'>
+              <h3>(17) 99775-1918</h3>
+            </div>
+          </div>
         </div>
       </div>
     </section>
