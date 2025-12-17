@@ -2,6 +2,7 @@ import './index.css'
 import 'react-multi-carousel/lib/styles.css'
 import Carousel from 'react-multi-carousel'
 import { BREAKPOINTS } from '../../constants'
+import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 // Importando imagens dos projetos
 import GuaraImg from '../../assets/projects/Guará Acqua Park/GUA-IMG-01.jpg'
@@ -82,8 +83,10 @@ const CustomDot = ({ onClick, active }: { onClick?: () => void; active?: boolean
 )
 
 function Projects() {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 })
+
   return (
-    <div className='projects-section' id='projects'>
+    <section ref={ref as React.RefObject<HTMLElement>} className={`projects-section scroll-animate scroll-fade-in ${isVisible ? 'is-visible' : ''}`} id='projects'>
       <div className='projects-container'>
         <h2 className='projects-title'>Nossos Projetos</h2>
         <p className='projects-subtitle'>Construindo experiências memoráveis</p>
@@ -131,7 +134,7 @@ function Projects() {
           </Carousel>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

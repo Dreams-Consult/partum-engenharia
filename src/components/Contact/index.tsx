@@ -1,11 +1,14 @@
 import './index.css'
 import { useState, type FormEvent } from 'react'
+import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const CONTACT_TITLE = 'Contato'
 const CONTACT_SUBTITLE = 'Estamos prontos para o seu desafio'
 const CONTACT_DESCRIPTION = 'Preencha o formulário e entre em contato e receba um atendimento especializado para o seu projeto. Ou entre em contato pelo whatsapp'
 
 function Contact() {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 })
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -43,8 +46,8 @@ function Contact() {
   }
 
   return (
-    <section className='contact-section' id='contact'>
-      <div className='contact-container'>
+    <section ref={ref as React.RefObject<HTMLElement>} className='contact-section' id='contact'>
+      <div className={`contact-container scroll-animate scroll-fade-in ${isVisible ? 'is-visible' : ''}`}>
         <div className='contact-content'>
           <form className='contact-form' onSubmit={handleSubmit}>
             <div className='form-group'>

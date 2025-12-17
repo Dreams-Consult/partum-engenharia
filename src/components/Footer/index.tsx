@@ -1,5 +1,5 @@
 import './index.css'
-import logo from '../../assets/SVG/LOGO-COR2-V2.svg'
+import logo from '../../assets/SVG/LOGO-COR2-H1.svg'
 
 function Footer() {
   return (

@@ -1,5 +1,6 @@
 import './index.css'
 import { QuoteCard } from '../QuoteCard'
+import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const TESTIMONIALS_TITLE = 'Depoimentos'
 
@@ -44,23 +45,29 @@ const TESTIMONIALS: Testimonial[] = [
 ]
 
 function Testimonials() {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 })
+
   return (
-    <section className='testimonials-section' id='testimonials'>
+    <section ref={ref as React.RefObject<HTMLElement>} className='testimonials-section' id='testimonials'>
       <div className='testimonials-container'>
-        <div className='testimonials-header'>
+        <div className={`testimonials-header scroll-animate scroll-fade-in-left ${isVisible ? 'is-visible' : ''}`}>
           <p className='testimonials-label'>{TESTIMONIALS_TITLE}</p>
           <h2 className='testimonials-title'>Histórias de confiança</h2>
           <h2 className='testimonials-title-highlight'>construídas juntos</h2>
         </div>
 
         <div className='testimonials-grid'>
-          {TESTIMONIALS.map(testimonial => (
-            <QuoteCard
+          {TESTIMONIALS.map((testimonial, index) => (
+            <div 
               key={testimonial.id}
-              text={testimonial.text}
-              authorName={testimonial.name}
-              authorRole={testimonial.role}
-            />
+              className={`scroll-animate scroll-fade-in-right delay-${(index + 1) * 100} ${isVisible ? 'is-visible' : ''}`}
+            >
+              <QuoteCard
+                text={testimonial.text}
+                authorName={testimonial.name}
+                authorRole={testimonial.role}
+              />
+            </div>
           ))}
         </div>
       </div>

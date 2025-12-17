@@ -21,6 +21,10 @@
 }
 
 .logoBar img {
+  height: 70px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 

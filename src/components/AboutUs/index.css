@@ -88,7 +88,8 @@
 
 .about-logo {
   flex: 0 0 auto;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,6 +99,9 @@
   width: 100%;
   height: auto;
   max-width: 650px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
 }
 
@@ -145,6 +149,7 @@
 
   .about-container {
     padding: 0 30px;
+    gap: 40px;
   }
 
   .about-title {
@@ -156,10 +161,15 @@
   }
 
   .about-logo {
-    max-width: 350px;
+    max-width: 100%;
   }
 
   .about-logo img {
     max-width: 100%;
+  }
+  
+  .about-cta-button {
+    width: 100%;
+    padding: 12px 30px;
   }
 }

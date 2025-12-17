@@ -5,6 +5,8 @@
   padding: 0;
   margin: 0;
   text-align: center;
+  min-height: 100vh;
+  background-color: #0D162B;
 }
 
 .whatsapp-icon {

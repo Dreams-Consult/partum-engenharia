@@ -1,4 +1,5 @@
 import './App.css'
+import './styles/animations.css'
 import LogoWhatsapp from './assets/whatsapp-svgrepo-com.svg'
 import { Topbar } from './components/TopBar'
 import { Home } from './components/Home'

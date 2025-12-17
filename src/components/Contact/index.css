@@ -144,6 +144,16 @@
 }
 
 /* Responsividade */
+@media (max-width: 1200px) {
+  .contact-container {
+    padding: 0 60px;
+  }
+  
+  .contact-content {
+    gap: 60px;
+  }
+}
+
 @media (max-width: 1024px) {
   .contact-content {
     grid-template-columns: 1fr;
@@ -183,6 +193,11 @@
   
   .submit-button {
     width: 100%;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
   }
 }
 

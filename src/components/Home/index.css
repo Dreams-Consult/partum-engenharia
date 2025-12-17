@@ -1,7 +1,9 @@
 .home-carousel-wrapper {
   width: 100%;
-  margin-top: 120px;
+  margin: 0;
+  padding: 0;
   position: relative;
+  margin-top: 90px;
 }
 
 .home-carousel {
@@ -16,6 +18,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -170,11 +173,12 @@
 /* Responsividade para tablets */
 @media (max-width: 1024px) {
   .home-carousel-wrapper {
-    margin-top: 110px;
+    margin-top: 90px;
   }
 
   .home-section {
     min-height: 80vh;
+    height: 80vh;
   }
 
   .home-content {
@@ -198,11 +202,12 @@
 /* Responsividade para tablets pequenos */
 @media (max-width: 768px) {
   .home-carousel-wrapper {
-    margin-top: 100px;
+    margin-top: 90px;
   }
 
   .home-section {
     min-height: 70vh;
+    height: 70vh;
     background-position: 30% center;
     justify-content: center;
   }
@@ -237,6 +242,7 @@
 
   .home-section {
     min-height: 60vh;
+    height: 60vh;
     background-position: 25% center;
   }
 
