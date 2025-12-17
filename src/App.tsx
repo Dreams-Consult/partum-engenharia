@@ -6,6 +6,7 @@ import { Projects } from './components/Projects'
 import { AboutUs } from './components/AboutUs'
 import { Testimonials } from './components/Testimonials'
 import { Contact } from './components/Contact'
+import { Footer } from './components/Footer'
 import { WHATSAPP_URL } from './constants'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       <AboutUs />
       <Testimonials />
       <Contact />
+      <Footer />
     </>
   )
 }
