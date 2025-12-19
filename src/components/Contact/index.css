@@ -92,7 +92,8 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: left;
+  /* justify-content: center; */
 }
 
 .contact-label {
@@ -130,11 +131,10 @@
   margin-top: 20px;
 }
 
-.whatsapp-icon {
+.whatsapp-icon-contact {
   width: 40px;
   height: 40px;
   color: #7ec4e8;
-  flex-shrink: 0;
 }
 
 .whatsapp-number {

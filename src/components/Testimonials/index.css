@@ -22,9 +22,10 @@
 .testimonials-header-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 40px;
+  /* justify-content: center; */
+  padding: 0px 20px 40px 20px;
   min-height: 240px;
+  text-align: left;
 }
 
 .testimonials-header {
@@ -98,6 +99,10 @@
   .testimonials-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+    .testimonials-header-card {
+    align-items: center;
   }
 }
 
