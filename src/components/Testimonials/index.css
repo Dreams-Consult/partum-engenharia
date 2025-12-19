@@ -2,16 +2,29 @@
   background: #101d3d;
   padding: 100px 0;
   position: relative;
+  overflow: visible;
 }
 
 .testimonials-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 80px;
+  overflow: visible;
+}
+
+.testimonials-grid {
   display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: 80px;
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  overflow: visible;
+}
+
+.testimonials-header-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  min-height: 240px;
 }
 
 .testimonials-header {
@@ -43,34 +56,15 @@
   margin: 0;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
 @media (min-width: 992px) {
   .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .testimonials-grid > :nth-child(1),
-  .testimonials-grid > :nth-child(2) {
-    grid-column: span 1;
-  }
-  
-  .testimonials-grid > :nth-child(3),
-  .testimonials-grid > :nth-child(4),
-  .testimonials-grid > :nth-child(5) {
-    grid-column: span 1;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Responsividade */
 @media (max-width: 1400px) {
   .testimonials-container {
-    grid-template-columns: 250px 1fr;
-    gap: 50px;
     padding: 0 60px;
   }
 
@@ -80,33 +74,23 @@
   }
   
   .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-  }
-  
-  .testimonials-grid > :nth-child(1),
-  .testimonials-grid > :nth-child(2),
-  .testimonials-grid > :nth-child(3),
-  .testimonials-grid > :nth-child(4),
-  .testimonials-grid > :nth-child(5) {
-    grid-column: span 1;
   }
 }
 
 @media (max-width: 1200px) {
   .testimonials-container {
-    grid-template-columns: 1fr;
-    gap: 50px;
     padding: 0 40px;
-  }
-
-  .testimonials-header {
-    position: static;
-    text-align: center;
   }
 
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-title,
+  .testimonials-title-highlight {
+    font-size: 2rem;
   }
 }
 
@@ -114,14 +98,6 @@
   .testimonials-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-  
-  .testimonials-grid > :nth-child(1),
-  .testimonials-grid > :nth-child(2),
-  .testimonials-grid > :nth-child(3),
-  .testimonials-grid > :nth-child(4),
-  .testimonials-grid > :nth-child(5) {
-    grid-column: 1;
   }
 }
 
@@ -131,7 +107,7 @@
   }
 
   .testimonials-container {
-    padding: 0 30px;
+    padding: 0 20px;
   }
 
   .testimonials-title,

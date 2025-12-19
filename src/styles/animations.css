@@ -98,6 +98,31 @@
   animation: fadeInRight 1.2s ease-out forwards;
 }
 
+/* Reduzir amplitude das animações no mobile */
+@media (max-width: 768px) {
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
 .scroll-fade-in-left.is-visible {
   animation: fadeInLeft 1s ease-out forwards;
 }

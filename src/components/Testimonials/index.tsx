@@ -50,13 +50,15 @@ function Testimonials() {
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className='testimonials-section' id='testimonials'>
       <div className='testimonials-container'>
-        <div className={`testimonials-header scroll-animate scroll-fade-in-left ${isVisible ? 'is-visible' : ''}`}>
-          <p className='testimonials-label'>{TESTIMONIALS_TITLE}</p>
-          <h2 className='testimonials-title'>Histórias de confiança</h2>
-          <h2 className='testimonials-title-highlight'>construídas juntos</h2>
-        </div>
-
         <div className='testimonials-grid'>
+          {/* Título no primeiro espaço */}
+          <div className={`testimonials-header-card scroll-animate scroll-fade-in-left ${isVisible ? 'is-visible' : ''}`}>
+            <p className='testimonials-label'>{TESTIMONIALS_TITLE}</p>
+            <h2 className='testimonials-title'>Histórias de confiança</h2>
+            <h2 className='testimonials-title-highlight'>construídas juntos</h2>
+          </div>
+
+          {/* Cards de depoimentos */}
           {TESTIMONIALS.map((testimonial, index) => (
             <div 
               key={testimonial.id}
