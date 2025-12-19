@@ -100,49 +100,6 @@
   height: 20px;
 }
 
-.search-bar {
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 5px 10px;
-  transition: all 0.3s ease;
-}
-
-.search-bar:focus-within {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.search-bar input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  padding: 5px 10px;
-  width: 150px;
-  font-size: 0.9rem;
-}
-
-.search-bar input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.search-bar button {
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  transition: color 0.3s ease;
-}
-
-.search-bar button:hover {
-  color: #4a9fd8;
-}
-
 .mobile-actions {
   display: none;
 }
@@ -228,10 +185,6 @@
   }
 
   .socialBar {
-    display: none;
-  }
-
-  .search-bar {
     display: none;
   }
 
