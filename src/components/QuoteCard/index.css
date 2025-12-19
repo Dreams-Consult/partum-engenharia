@@ -1,5 +1,4 @@
 .quote-card {
-  background: linear-gradient(135deg, rgba(58, 96, 134, 0.4) 0%, #0D162B 100%);
   border: 2px solid rgba(126, 196, 232, 0.35);
   border-radius: 25px;
   padding: 30px 28px;
@@ -10,6 +9,13 @@
   position: relative;
   backdrop-filter: blur(10px);
   overflow: visible;
+  /* box-shadow:
+  inset -12px -12px 30px rgba(126, 196, 232, 0.25),
+  inset 12px  12px 30px rgba(126, 196, 232, 0.25); */
+
+  box-shadow: 
+  inset 70px 70px 30px -70px rgba(126, 196, 232, 0.25),
+  inset 10px 0px 60px -70px rgba(126, 196, 232, 0.25);
 }
 
 .quote-card:hover {
