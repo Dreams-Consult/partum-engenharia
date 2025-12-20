@@ -1,0 +1,34 @@
+{
+  "contact": {
+    "email": "contato@partumengenharia.com.br",
+    "phone": "+55 (11) 98765-4321",
+    "whatsapp": "+55 (11) 98765-4321",
+    "instagram": "@partumengenharia",
+    "instagramUrl": "https://www.instagram.com/partumengenharia",
+    "address": {
+      "street": "Rua das Acácias, 123",
+      "complement": "Sala 45",
+      "neighborhood": "Centro",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01234-567",
+      "full": "Rua das Acácias, 123 - Sala 45, Centro, São Paulo - SP, 01234-567"
+    }
+  },
+  "company": {
+    "name": "Partum Engenharia",
+    "cnpj": "12.345.678/0001-90",
+    "description": "Especializada em projetos de engenharia de grande porte",
+    "foundedYear": 2010
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/partumengenharia",
+    "linkedin": "https://www.linkedin.com/company/partumengenharia",
+    "youtube": "https://www.youtube.com/@partumengenharia"
+  },
+  "businessHours": {
+    "weekdays": "Segunda a Sexta: 08:00 - 18:00",
+    "saturday": "Sábado: 08:00 - 12:00",
+    "sunday": "Domingo: Fechado"
+  }
+}

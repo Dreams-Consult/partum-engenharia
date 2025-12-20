@@ -3,12 +3,21 @@ import 'react-multi-carousel/lib/styles.css'
 import Carousel from 'react-multi-carousel'
 import { BREAKPOINTS } from '../../constants'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import pageData from '../../data/data.json'
 
 // Importando imagens dos projetos
 import GuaraImg from '../../assets/projects/Guará Acqua Park/GUA-IMG-01.jpg'
 import AqualandImg from '../../assets/projects/Aqualand Resort/AQL-IMG-001.jpeg'
 import IslaCancunImg from '../../assets/projects/Isla Cancun/ISC-IMG-001.jpeg'
 import ValeCachoeirasImg from '../../assets/projects/Vale das Cachoeiras/VLC-IMG-002.jpg'
+
+// Mapeamento de imagens
+const imageMap: Record<string, string> = {
+  '/src/assets/projects/Guará Acqua Park/GUA-IMG-01.jpg': GuaraImg,
+  '/src/assets/projects/Aqualand Resort/AQL-IMG-001.jpeg': AqualandImg,
+  '/src/assets/projects/Isla Cancun/ISC-IMG-001.jpeg': IslaCancunImg,
+  '/src/assets/projects/Vale das Cachoeiras/VLC-IMG-002.jpg': ValeCachoeirasImg,
+}
 
 const CAROUSEL_RESPONSIVE = {
   desktop: {
@@ -27,40 +36,6 @@ const CAROUSEL_RESPONSIVE = {
     slidesToSlide: 1
   }
 }
-
-interface Project {
-  id: number
-  name: string
-  location: string
-  image: string
-}
-
-const PROJECTS: Project[] = [
-  {
-    id: 1,
-    name: 'Guará Acqua Park',
-    location: 'Castanhal - Pará',
-    image: GuaraImg
-  },
-  {
-    id: 2,
-    name: 'Aqualand Resort',
-    location: 'Salinópolis - Pará',
-    image: AqualandImg
-  },
-  {
-    id: 3,
-    name: 'Isla Cancun Resort',
-    location: 'Cardoso - SP',
-    image: IslaCancunImg
-  },
-  {
-    id: 4,
-    name: 'Vale das Águas Park',
-    location: 'Pitanga - Paraná',
-    image: ValeCachoeirasImg
-  }
-]
 
 const CustomLeftArrow = ({ onClick }: { onClick?: () => void }) => (
   <button className='custom-arrow custom-left-arrow' onClick={onClick} aria-label='Anterior'>
@@ -113,12 +88,12 @@ function Projects() {
             rewind={false}
             rewindWithAnimation={false}
           >
-            {PROJECTS.map((project) => (
+            {pageData.projects.map((project) => (
               <div key={project.id} className='project-card'>
                 <div
                   className='project-image'
                   style={{ 
-                    backgroundImage: `url(${project.image})`,
+                    backgroundImage: `url(${imageMap[project.image]})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat'

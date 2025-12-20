@@ -1,0 +1,82 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Guará Acqua Park",
+      "location": "Castanhal - Pará",
+      "image": "/src/assets/projects/Guará Acqua Park/GUA-IMG-01.jpg",
+      "description": "Parque aquático completo com infraestrutura moderna"
+    },
+    {
+      "id": 2,
+      "name": "Aqualand Resort",
+      "location": "Salinópolis - Pará",
+      "image": "/src/assets/projects/Aqualand Resort/AQL-IMG-001.jpeg",
+      "description": "Resort de alto padrão com área de lazer aquática"
+    },
+    {
+      "id": 3,
+      "name": "Isla Cancun Resort",
+      "location": "Cardoso - SP",
+      "image": "/src/assets/projects/Isla Cancun/ISC-IMG-001.jpeg",
+      "description": "Complexo turístico com parque aquático integrado"
+    },
+    {
+      "id": 4,
+      "name": "Vale das Águas Park",
+      "location": "Pitanga - Paraná",
+      "image": "/src/assets/projects/Vale das Cachoeiras/VLC-IMG-002.jpg",
+      "description": "Parque temático com atrações aquáticas"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "text": "A Partum Engenharia superou todas as nossas expectativas. O projeto foi entregue no prazo e com qualidade excepcional. A equipe demonstrou profissionalismo e dedicação em cada etapa.",
+      "name": "João Silva",
+      "description": "Diretor de Projetos",
+      "company": "Aqualand Resort",
+      "image": "/assets/testimonials/joao-silva.jpg"
+    },
+    {
+      "id": 2,
+      "text": "Trabalhar com a Partum foi uma experiência incrível. Eles entenderam perfeitamente nossa visão e transformaram em realidade com maestria técnica.",
+      "name": "Maria Santos",
+      "description": "Gerente de Operações",
+      "company": "Guará Acqua Park",
+      "image": "/assets/testimonials/maria-santos.jpg"
+    },
+    {
+      "id": 3,
+      "text": "Excelente parceria! A expertise da equipe em projetos de grande porte foi fundamental para o sucesso do nosso empreendimento.",
+      "name": "Carlos Oliveira",
+      "description": "CEO",
+      "company": "Isla Cancun",
+      "image": "/assets/testimonials/carlos-oliveira.jpg"
+    },
+    {
+      "id": 4,
+      "text": "Recomendo fortemente a Partum Engenharia. Atenção aos detalhes, cumprimento de prazos e inovação técnica fazem parte do DNA da empresa.",
+      "name": "Ana Paula Costa",
+      "description": "Diretora Administrativa",
+      "company": "Vale das Cachoeiras",
+      "image": "/assets/testimonials/ana-costa.jpg"
+    },
+        {
+      "id": 5,
+      "text": "Recomendo fortemente a Partum Engenharia. Atenção aos detalhes, cumprimento de prazos e inovação técnica fazem parte do DNA da empresa.",
+      "name": "Ana Paula Costa",
+      "description": "Diretora Administrativa",
+      "company": "Vale das Cachoeiras",
+      "image": "/assets/testimonials/ana-costa.jpg"
+    },
+        {
+      "id": 6,
+      "text": "Recomendo fortemente a Partum Engenharia. Atenção aos detalhes, cumprimento de prazos e inovação técnica fazem parte do DNA da empresa.",
+      "name": "Ana Paula Costa",
+      "description": "Diretora Administrativa",
+      "company": "Vale das Cachoeiras",
+      "image": "/assets/testimonials/ana-costa.jpg"
+    }
+  ]
+}
