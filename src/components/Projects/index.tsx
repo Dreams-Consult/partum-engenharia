@@ -4,6 +4,8 @@ import Carousel from 'react-multi-carousel'
 import { BREAKPOINTS } from '../../constants'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import pageData from '../../data/data.json'
+import arrowLeft from '../../assets/SVG/ICON-SETA-ESQUERDA.svg'
+import arrowRight from '../../assets/SVG/ICON-SETA-DIREITA.svg'
 
 // Importando imagens dos projetos
 import GuaraImg from '../../assets/projects/Guará Acqua Park/GUA-IMG-01.jpg'
@@ -39,13 +41,13 @@ const CAROUSEL_RESPONSIVE = {
 
 const CustomLeftArrow = ({ onClick }: { onClick?: () => void }) => (
   <button className='custom-arrow custom-left-arrow' onClick={onClick} aria-label='Anterior'>
-    ‹
+    <img src={arrowLeft} alt='Anterior' />
   </button>
 )
 
 const CustomRightArrow = ({ onClick }: { onClick?: () => void }) => (
   <button className='custom-arrow custom-right-arrow' onClick={onClick} aria-label='Próximo'>
-    ›
+    <img src={arrowRight} alt='Próximo' />
   </button>
 )
 
