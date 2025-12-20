@@ -119,15 +119,25 @@
 @media (max-width: 768px) {
   .testimonials-section {
     padding: 60px 0;
+    overflow-x: hidden;
   }
 
   .testimonials-container {
-    padding: 0 20px;
+    padding: 0 15px;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .testimonials-grid {
     gap: 15px;
+    width: 100%;
+  }
+
+  .testimonials-grid > div {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .testimonials-title,
