@@ -17,25 +17,63 @@ function Contact() {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [modalState, setModalState] = useState<{
+    isOpen: boolean
+    type: 'success' | 'error'
+    message: string
+  }>({
+    isOpen: false,
+    type: 'success',
+    message: ''
+  })
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Aqui você pode integrar com um serviço de email ou API
-    console.log('Form submitted:', formData)
-
-    // Simular envio
-    setTimeout(() => {
-      alert('Mensagem enviada com sucesso! Entraremos em contato em breve.')
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
+    try {
+      const response = await fetch('https://n8n.fehshop.com/webhook/partum-engenharia/captura', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          nome: formData.name,
+          email: formData.email,
+          telefone: formData.phone,
+          mensagem: formData.message
+        })
       })
+
+      if (response.ok) {
+        setModalState({
+          isOpen: true,
+          type: 'success',
+          message: 'Mensagem enviada com sucesso! Entraremos em contato em breve.'
+        })
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        })
+      } else {
+        setModalState({
+          isOpen: true,
+          type: 'error',
+          message: 'Erro ao enviar mensagem. Por favor, tente novamente.'
+        })
+      }
+    } catch (error) {
+      console.error('Erro ao enviar formulário:', error)
+      setModalState({
+        isOpen: true,
+        type: 'error',
+        message: 'Erro ao enviar mensagem. Por favor, tente novamente.'
+      })
+    } finally {
       setIsSubmitting(false)
-    }, 1000)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -92,7 +130,6 @@ function Contact() {
                 name='message'
                 value={formData.message}
                 onChange={handleChange}
-                required
                 placeholder='Mensagem'
                 rows={6}
               />
@@ -124,6 +161,35 @@ function Contact() {
           </div>
         </div>
       </div>
+
+      {/* Modal de confirmação */}
+      {modalState.isOpen && (
+        <div className='modal-overlay' onClick={() => setModalState({ ...modalState, isOpen: false })}>
+          <div className='modal-content' onClick={(e) => e.stopPropagation()}>
+            <div className={`modal-icon ${modalState.type}`}>
+              {modalState.type === 'success' ? (
+                <svg viewBox='0 0 24 24' fill='currentColor'>
+                  <path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/>
+                </svg>
+              ) : (
+                <svg viewBox='0 0 24 24' fill='currentColor'>
+                  <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z'/>
+                </svg>
+              )}
+            </div>
+            <h3 className='modal-title'>
+              {modalState.type === 'success' ? 'Sucesso!' : 'Ops!'}
+            </h3>
+            <p className='modal-message'>{modalState.message}</p>
+            <button 
+              className='modal-button'
+              onClick={() => setModalState({ ...modalState, isOpen: false })}
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
