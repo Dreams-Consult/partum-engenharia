@@ -85,7 +85,7 @@ function Contact() {
 
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className='contact-section' id='contact'>
-      <div className={`contact-container scroll-animate scroll-fade-in ${isVisible ? 'is-visible' : ''}`}>
+      <div className={`contact-container scroll-animate scroll-fade-in-up ${isVisible ? 'is-visible' : ''}`}>
         <div className='contact-content'>
           <form className='contact-form' onSubmit={handleSubmit}>
             <div className='form-group'>
