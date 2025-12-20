@@ -8,6 +8,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 80px;
+  box-sizing: border-box;
 }
 
 .contact-content {
@@ -175,7 +176,7 @@
   }
   
   .contact-container {
-    padding: 0 30px;
+    padding: 0 15px;
   }
 
   .contact-title {

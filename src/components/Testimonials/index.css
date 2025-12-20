@@ -15,7 +15,7 @@
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 30px 30px;
   overflow: visible;
 }
 
@@ -86,6 +86,7 @@
 
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px 20px;
   }
 
   .testimonials-title,
@@ -98,10 +99,20 @@
   .testimonials-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+    width: 100%;
   }
 
-    .testimonials-header-card {
+  .testimonials-grid > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
+  }
+
+  .testimonials-header-card {
+    align-items: center;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -112,10 +123,20 @@
 
   .testimonials-container {
     padding: 0 20px;
+    width: 100%;
+  }
+
+  .testimonials-grid {
+    gap: 15px;
   }
 
   .testimonials-title,
   .testimonials-title-highlight {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .testimonials-header-card {
+    padding: 0px 10px 30px 10px;
+    min-height: auto;
   }
 }
