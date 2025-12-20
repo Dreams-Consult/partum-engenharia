@@ -121,14 +121,13 @@
   color: #e8f0f7;
   font-size: 1rem;
   line-height: 1.7;
-  margin: 0 0 40px 0;
+  margin: 0 0 30px 0;
 }
 
 .contact-whatsapp {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-top: 20px;
 }
 
 .whatsapp-icon-contact {

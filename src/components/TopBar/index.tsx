@@ -33,7 +33,7 @@ function Topbar() {
 
   return (
     <nav className='topBar'>
-      <div className='logoBar'>
+      <div className='logoBar' onClick={() => scrollToSection('home')} style={{ cursor: 'pointer' }}>
         <img src={PartumLogo} alt='Partum Engenharia' width="200" height="100" />
       </div>
 

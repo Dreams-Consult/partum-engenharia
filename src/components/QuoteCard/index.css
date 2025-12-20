@@ -1,14 +1,16 @@
 .quote-card {
-  border: 2px solid rgba(126, 196, 232, 0.35);
+  border: 3px solid rgba(126, 196, 232, 0.35);
   border-radius: 25px;
   padding: 30px 28px;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  min-height: 240px;
+  max-width: 300px;
+  min-height: 300px;
   position: relative;
   backdrop-filter: blur(10px);
   overflow: visible;
+  text-align: left;
   /* box-shadow:
   inset -12px -12px 30px rgba(126, 196, 232, 0.25),
   inset 12px  12px 30px rgba(126, 196, 232, 0.25); */
