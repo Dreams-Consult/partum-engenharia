@@ -38,6 +38,23 @@
   gap: 15px;
 }
 
+.footer-link {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  transform: translateX(5px);
+}
+
+.footer-link:hover .footer-icon {
+  color: #9dd5f0;
+}
+
+.footer-link:hover .footer-text {
+  color: #ffffff;
+}
+
 .footer-icon {
   width: 24px;
   height: 24px;

@@ -102,8 +102,6 @@
   object-fit: contain;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
 }
-  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
-}
 
 /* Responsividade */
 @media (max-width: 1200px) {

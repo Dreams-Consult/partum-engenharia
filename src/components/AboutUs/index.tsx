@@ -19,7 +19,7 @@ function AboutUs() {
 
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className='about-section' id='about' style={{ backgroundImage: `url(${BgProjetos})` }}>
-      <div className={`about-container scroll-animate scroll-fade-in-up ${isVisible ? 'is-visible' : ''}`}>
+      <div className={`about-container scroll-animate scroll-fade-in-left ${isVisible ? 'is-visible' : ''}`}>
         <div className='about-content'>
           <p className='about-label'>{ABOUT_TITLE}</p>
           <h2 className='about-title'>{ABOUT_SUBTITLE}</h2>

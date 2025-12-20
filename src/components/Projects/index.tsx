@@ -61,12 +61,12 @@ function Projects() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 })
 
   return (
-    <section ref={ref as React.RefObject<HTMLElement>} className={`projects-section scroll-animate scroll-fade-in ${isVisible ? 'is-visible' : ''}`} id='projects'>
+    <section ref={ref as React.RefObject<HTMLElement>} className='projects-section' id='projects'>
       <div className='projects-container'>
-        <h2 className='projects-title'>Nossos Projetos</h2>
-        <p className='projects-subtitle'>Construindo experiências memoráveis</p>
+        <h2 className={`projects-title scroll-animate scroll-fade-in-right ${isVisible ? 'is-visible' : ''}`}>Nossos Projetos</h2>
+        <p className={`projects-subtitle scroll-animate scroll-fade-in-right delay-100 ${isVisible ? 'is-visible' : ''}`}>Construindo experiências memoráveis</p>
 
-        <div className='projects-carousel-wrapper'>
+        <div className={`projects-carousel-wrapper scroll-animate scroll-fade-in-right delay-200 ${isVisible ? 'is-visible' : ''}`}>
           <Carousel
             responsive={CAROUSEL_RESPONSIVE}
             infinite={true}
