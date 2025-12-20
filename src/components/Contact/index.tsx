@@ -4,7 +4,7 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import siteConfig from '../../data/siteConfig.json'
 
 const CONTACT_TITLE = 'Contato'
-const CONTACT_DESCRIPTION = 'Preencha o formulário e entre em contato e receba um atendimento especializado para o seu projeto. Ou entre em contato pelo whatsapp'
+const CONTACT_DESCRIPTION = 'Preencha o formulário e entre em contato e receba um atendimento especializado para o seu projeto.\n\nOu entre em contato pelo whatsapp'
 
 function Contact() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 })
