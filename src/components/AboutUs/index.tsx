@@ -1,4 +1,5 @@
 import './index.css'
+import { Link } from 'react-router-dom'
 import BgProjetos from '../../assets/BG-PROJETOS.svg'
 import LogoPartum from '../../assets/SVG/LOGO-COR2-V2.svg'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
@@ -10,13 +11,6 @@ const ABOUT_INTRO = 'Mais do que obras, a Partum constrói experiências. Reconh
 function AboutUs() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 })
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className='about-section' id='about' style={{ backgroundImage: `url(${BgProjetos})` }}>
       <div className={`about-container scroll-animate scroll-fade-in-left ${isVisible ? 'is-visible' : ''}`}>
@@ -25,9 +19,9 @@ function AboutUs() {
           <h2 className='about-title'>{ABOUT_SUBTITLE}</h2>
           <p className='about-intro'>{ABOUT_INTRO}</p>
           
-          <button className='about-cta-button' onClick={scrollToContact} type='button'>
+          <Link to='/sobre' className='about-cta-button'>
             Saiba mais
-          </button>
+          </Link>
         </div>
         
         <div className='about-logo'>

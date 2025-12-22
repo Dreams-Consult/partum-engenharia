@@ -1,4 +1,5 @@
 import './index.css'
+import { useNavigate, useLocation } from 'react-router-dom'
 import PartumLogo from '../../assets/SVG/LOGO-COR2-H2.svg'
 import type { NavItem } from '../../types'
 import { useState } from 'react'
@@ -13,13 +14,28 @@ const NAV_ITEMS: NavItem[] = [
 
 function Topbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const scrollToSection = (sectionId: string): void => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      setIsMenuOpen(false)
+    // Se estamos na página de sobre, navega para home primeiro
+    if (location.pathname !== '/') {
+      navigate('/')
+      // Aguarda um momento para a página carregar antes de fazer scroll
+      setTimeout(() => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    } else {
+      // Se já estamos na home, apenas faz scroll
+      const element = document.getElementById(sectionId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
     }
+    setIsMenuOpen(false)
   }
 
   const toggleMenu = () => {

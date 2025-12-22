@@ -63,6 +63,7 @@
 }
 
 .about-cta-button {
+  display: inline-block;
   background: #7ec4e8;
   color: #102444;
   border: none;
@@ -74,6 +75,8 @@
   transition: all 0.3s ease;
   text-transform: capitalize;
   box-shadow: 0 4px 20px rgba(126, 196, 232, 0.4);
+  text-decoration: none;
+  text-align: center;
 }
 
 .about-cta-button:hover {

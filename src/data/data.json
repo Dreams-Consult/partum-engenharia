@@ -32,43 +32,27 @@
   "testimonials": [
     {
       "id": 1,
-      "text": "A Partum Engenharia superou todas as nossas expectativas. O projeto foi entregue no prazo e com qualidade excepcional. A equipe demonstrou profissionalismo e dedicação em cada etapa.",
-      "name": "João Silva",
-      "description": "Diretor de Projetos",
-      "company": "Aqualand Resort",
-      "image": "/assets/testimonials/joao-silva.jpg"
+      "text": "Procurei a Partum Engenharia para nosso plano de expansão em 2021. O Paulo então nos propôs um MasterPlan onde podemos nos planejar e executar a obra por etapas, eles conseguiram nos ajudar com os Projetos e execução da Obra, estamos no meio do processo, já inauguramos nosso Playkids e Piscina de Ondas, e agora estamos iniciando uma Torre com Toboáguas e um Rio de correnteza. Estamos muito felizes com o resultado.",
+      "name": "Daniel Barbosa",
+      "description": "Proprietário",
+      "company": "Guará Acqua Park",
+      "image": "/assets/testimonials/daniel-barbosa.jpg"
     },
     {
       "id": 2,
-      "text": "Trabalhar com a Partum foi uma experiência incrível. Eles entenderam perfeitamente nossa visão e transformaram em realidade com maestria técnica.",
-      "name": "Maria Santos",
-      "description": "Gerente de Operações",
-      "company": "Guará Acqua Park",
-      "image": "/assets/testimonials/maria-santos.jpg"
+      "text": "Conheci o Paulo da Partum Engenharia através de uma indicação, ele seria a pessoa certa para os projetos do Parque que pretendia construir. Desde a primeira reunião senti que ele era a pessoa certa para o trabalho, muito profissional e com um vasto conhecimento na área. Hoje já estamos com o plano de expansão do parque e iremos fazer além dos projetos a construção com eles também.",
+      "name": "Antonio Aguiar",
+      "description": "Proprietário",
+      "company": "Isla Cancun Resort",
+      "image": "/assets/testimonials/antonio-aguiar.jpg"
     },
     {
       "id": 3,
-      "text": "Excelente parceria! A expertise da equipe em projetos de grande porte foi fundamental para o sucesso do nosso empreendimento.",
-      "name": "Carlos Oliveira",
-      "description": "CEO",
-      "company": "Isla Cancun",
-      "image": "/assets/testimonials/carlos-oliveira.jpg"
-    },
-    {
-      "id": 4,
-      "text": "Recomendo fortemente a Partum Engenharia. Atenção aos detalhes, cumprimento de prazos e inovação técnica fazem parte do DNA da empresa.",
-      "name": "Ana Paula Costa",
-      "description": "Diretora Administrativa",
+      "text": "A Partum Engenharia pode nos ajudar aqui com o Projeto e construção de nossa Piscina de Ondas, Excelente Profissional com um grande conhecimento de parques aquáticos, nossa piscina ficou ótimo temos muito orgulho dela. Recentemente procurei o Paulo para fazer o projeto de nosso Playkids que vamos inaugurar em novembro, Com certeza indico a Partum Engenharia.",
+      "name": "Claudecir Silva",
+      "description": "Proprietário",
       "company": "Vale das Cachoeiras",
-      "image": "/assets/testimonials/ana-costa.jpg"
-    },
-        {
-      "id": 5,
-      "text": "Recomendo fortemente a Partum Engenharia. Atenção aos detalhes, cumprimento de prazos e inovação técnica fazem parte do DNA da empresa.",
-      "name": "Ana Paula Costa",
-      "description": "Diretora Administrativa",
-      "company": "Vale das Cachoeiras",
-      "image": "/assets/testimonials/ana-costa.jpg"
+      "image": "/assets/testimonials/claudecir-silva.jpg"
     }
   ]
 }
