@@ -1,5 +1,4 @@
 import './index.css'
-import { useEffect } from 'react'
 import BgImage from '../../assets/IMAGEM-SOBRE.png'
 import IconCrescer from '../../assets/SVG/ICONE-MISSAO-CRESCER.svg'
 import IconReduzir from '../../assets/SVG/ICONE-MISSAO-REDUZIR.svg'
@@ -8,10 +7,6 @@ import { Contact } from '../Contact'
 import { Footer } from '../Footer'
 
 function AboutUsDetails() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' })
-  }, [])
-
   const handleGoBack = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }

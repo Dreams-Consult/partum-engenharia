@@ -23,10 +23,6 @@ function ProjectDetails() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' })
-  }, [])
-
   const project = pageData.projects.find(p => p.id === Number(id))
 
   if (!project) {
