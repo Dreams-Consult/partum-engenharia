@@ -14,6 +14,42 @@
   width: 100%;
 }
 
+/* Setas customizadas do carrossel Home */
+.home-custom-left-arrow,
+.home-custom-right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 45px;
+  height: 45px;
+  transition: opacity 0.3s ease;
+}
+
+.home-custom-left-arrow {
+  left: 20px;
+}
+
+.home-custom-right-arrow {
+  right: 20px;
+}
+
+.home-custom-left-arrow:hover,
+.home-custom-right-arrow:hover {
+  opacity: 0.7;
+}
+
+.home-custom-left-arrow img,
+.home-custom-right-arrow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .home-section {
   position: relative;
   width: 100%;
@@ -21,7 +57,7 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -64,9 +100,10 @@
   z-index: 2;
   text-align: left;
   color: #ffffff;
-  max-width: 600px;
-  padding: 2rem;
-  margin-left: 100px;
+  max-width: 1400px;
+  width: 100%;
+  padding: 2rem 80px;
+  margin: 0 auto;
   animation: fadeInContent 1s ease-in;
 }
 
@@ -136,38 +173,41 @@
   transform: translateY(0);
 }
 
-/* Customização dos dots do carrossel */
-.home-carousel-dots {
+/* Customização do Swiper - Paginação (dots) */
+.home-carousel .swiper-pagination {
   bottom: 30px !important;
-  position: absolute;
 }
 
-.home-carousel-dots button {
-  border: 2px solid #ffffff !important;
-  background: transparent !important;
-  width: 12px !important;
-  height: 12px !important;
+.home-carousel .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 2px solid #ffffff;
+  opacity: 1;
 }
 
-.home-carousel-dots .react-multi-carousel-dot--active button {
-  background: #ffffff !important;
+.home-carousel .swiper-pagination-bullet-active {
+  background: #ffffff;
 }
 
-/* Setas do carrossel */
-.home-carousel .react-multiple-carousel__arrow {
-  background: rgba(0, 0, 0, 0.5) !important;
-  min-width: 50px;
-  min-height: 50px;
-  z-index: 10;
-}
-
-.home-carousel .react-multiple-carousel__arrow:hover {
-  background: rgba(0, 168, 232, 0.8) !important;
-}
-
-.home-carousel .react-multiple-carousel__arrow::before {
-  font-size: 20px;
+/* Setas do Swiper */
+.home-carousel .swiper-button-prev,
+.home-carousel .swiper-button-next {
+  background: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   color: #ffffff;
+}
+
+.home-carousel .swiper-button-prev:after,
+.home-carousel .swiper-button-next:after {
+  font-size: 20px;
+}
+
+.home-carousel .swiper-button-prev:hover,
+.home-carousel .swiper-button-next:hover {
+  background: rgba(0, 168, 232, 0.8);
 }
 
 /* Responsividade para tablets */
@@ -182,7 +222,7 @@
   }
 
   .home-content {
-    margin-left: 50px;
+    padding: 2rem 60px;
   }
 
   .home-title {
@@ -213,8 +253,7 @@
   }
 
   .home-content {
-    padding: 1.5rem;
-    margin-left: 0;
+    padding: 1.5rem 40px;
     text-align: center;
     max-width: 90%;
   }
@@ -228,9 +267,15 @@
     line-height: 1.5;
   }
 
-  .home-carousel .react-multiple-carousel__arrow {
-    min-width: 40px;
-    min-height: 40px;
+  .home-carousel .swiper-button-prev,
+  .home-carousel .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .home-carousel .swiper-button-prev:after,
+  .home-carousel .swiper-button-next:after {
+    font-size: 16px;
   }
 }
 
@@ -247,7 +292,7 @@
   }
 
   .home-content {
-    padding: 1rem;
+    padding: 1rem 20px;
   }
 
   .home-title {
@@ -267,14 +312,20 @@
     font-size: 0.9rem;
   }
 
-  .home-carousel .react-multiple-carousel__arrow {
-    min-width: 35px;
-    min-height: 35px;
+  .home-carousel .swiper-button-prev,
+  .home-carousel .swiper-button-next {
+    width: 35px;
+    height: 35px;
   }
 
-  .home-carousel-dots button {
-    width: 10px !important;
-    height: 10px !important;
+  .home-carousel .swiper-button-prev:after,
+  .home-carousel .swiper-button-next:after {
+    font-size: 14px;
+  }
+
+  .home-carousel .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
   }
 }
 
@@ -293,8 +344,9 @@
     font-size: 0.85rem;
   }
 
-  .home-carousel .react-multiple-carousel__arrow {
-    min-width: 30px;
-    min-height: 30px;
+  .home-carousel .swiper-button-prev,
+  .home-carousel .swiper-button-next {
+    width: 30px;
+    height: 30px;
   }
 }

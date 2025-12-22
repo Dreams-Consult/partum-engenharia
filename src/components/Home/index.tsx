@@ -1,27 +1,10 @@
 import './index.css'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
-import { BREAKPOINTS, CAROUSEL_CONFIG } from '../../constants'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import 'swiper/swiper-bundle.css'
 import type { CarouselSlide } from '../../types'
-
-const CAROUSEL_RESPONSIVE = {
-  desktop: {
-    breakpoint: BREAKPOINTS.desktop,
-    items: 1,
-    slidesToSlide: 1
-  },
-  tablet: {
-    breakpoint: BREAKPOINTS.tablet,
-    items: 1,
-    slidesToSlide: 1
-  },
-  mobile: {
-    breakpoint: BREAKPOINTS.mobile,
-    items: 1,
-    slidesToSlide: 1
-  }
-}
-
+import arrowLeft from '../../assets/SVG/ICON-SETA-ESQUERDA.svg'
+import arrowRight from '../../assets/SVG/ICON-SETA-DIREITA.svg'
 const CAROUSEL_SLIDES: CarouselSlide[] = [
   {
     id: 'slide-1',
@@ -63,40 +46,44 @@ function Home() {
 
   return (
     <section className="home-carousel-wrapper" id="home">
-      <Carousel
-        responsive={CAROUSEL_RESPONSIVE}
-        autoPlay={true}
-        autoPlaySpeed={CAROUSEL_CONFIG.autoPlaySpeed}
-        infinite={true}
-        arrows={true}
-        showDots={true}
-        swipeable={true}
-        draggable={true}
-        keyBoardControl={true}
-        customTransition={CAROUSEL_CONFIG.customTransition}
-        transitionDuration={CAROUSEL_CONFIG.transitionDuration}
-        containerClass="home-carousel"
-        dotListClass="home-carousel-dots"
-        itemClass="home-carousel-item"
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        navigation={{
+          prevEl: '.home-custom-left-arrow',
+          nextEl: '.home-custom-right-arrow'
+        }}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        loop={true}
+        speed={800}
+        className="home-carousel"
       >
         {CAROUSEL_SLIDES.map(slide => (
-          <div key={slide.id} className={`home-section ${slide.className}`}>
-            <div className="home-overlay" />
-            <div className="home-content">
-              {slide.welcome && <h3 className="home-welcome">{slide.welcome}</h3>}
-              <h1 className="home-title">{slide.title}</h1>
-              <p className="home-subtitle">{slide.subtitle}</p>
-              <button
-                className="home-cta-button"
-                onClick={scrollToContact}
-                type="button"
-              >
-                Solicite um projeto
-              </button>
+          <SwiperSlide key={slide.id}>
+            <div className={`home-section ${slide.className}`}>
+              <div className="home-overlay" />
+              <div className="home-content">
+                {slide.welcome && <h3 className="home-welcome">{slide.welcome}</h3>}
+                <h1 className="home-title">{slide.title}</h1>
+                <p className="home-subtitle">{slide.subtitle}</p>
+                <button
+                  className="home-cta-button"
+                  onClick={scrollToContact}
+                  type="button"
+                >
+                  Solicite um projeto
+                </button>
+              </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </Carousel>
+      </Swiper>
+      <button className="home-custom-left-arrow custom-arrow">
+        <img src={arrowLeft} alt="Anterior" />
+      </button>
+      <button className="home-custom-right-arrow custom-arrow">
+        <img src={arrowRight} alt="Próximo" />
+      </button>
     </section>
   )
 }

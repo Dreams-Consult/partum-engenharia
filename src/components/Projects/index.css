@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   padding: 80px 0;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .projects-container {
@@ -37,14 +37,24 @@
 
 .projects-carousel-wrapper {
   position: relative;
-  padding: 0 70px;
+  padding: 0 80px 60px 80px;
   max-width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .carousel-container {
-  overflow: visible;
-  padding: 0;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.projects-swiper {
+  overflow: hidden !important;
+  padding: 20px 0;
+}
+
+.projects-swiper .swiper-wrapper {
+  padding: 10px 0;
 }
 
 .carousel-item {
@@ -146,20 +156,27 @@
 }
 
 .custom-left-arrow {
-  left: 0;
+  left: 10px;
 }
 
 .custom-right-arrow {
-  right: 0;
+  right: 10px;
 }
 
 /* Indicadores (dots) customizados */
-.react-multi-carousel-dot-list {
-  bottom: -50px;
+.custom-dots-container {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  transform: none;
+  display: flex;
+  justify-content: center;
   gap: 10px;
+  z-index: 10;
+  margin-top: 30px;
 }
 
-.custom-dot {
+.custom-dots-container .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -169,14 +186,15 @@
   transition: all 0.3s ease;
   padding: 0;
   margin: 0 5px;
+  opacity: 1;
 }
 
-.custom-dot:hover {
+.custom-dots-container .swiper-pagination-bullet:hover {
   background: rgba(255, 255, 255, 0.6);
   transform: scale(1.2);
 }
 
-.custom-dot.active {
+.custom-dots-container .swiper-pagination-bullet-active {
   background: #4a9fd8;
   border-color: #ffffff;
   width: 14px;
@@ -195,7 +213,7 @@
   }
 
   .projects-carousel-wrapper {
-    padding: 0;
+    padding: 0 0 60px 0;
     max-width: 900px;
   }
 
@@ -250,7 +268,7 @@
   }
 
   .projects-carousel-wrapper {
-    padding: 0;
+    padding: 0 0 50px 0;
     max-width: 100%;
   }
 
