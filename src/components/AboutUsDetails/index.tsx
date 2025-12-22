@@ -1,15 +1,11 @@
 import './index.css'
-import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import LogoPartum from '../../assets/SVG/LOGO-COR2-V2.svg'
 import BgImage from '../../assets/IMAGEM-SOBRE.png'
 import IconCrescer from '../../assets/SVG/ICONE-MISSAO-CRESCER.svg'
 import IconReduzir from '../../assets/SVG/ICONE-MISSAO-REDUZIR.svg'
 import IconFortalecer from '../../assets/SVG/ICONE-MISSAO-FORTALECER.svg'
 
 function AboutUsDetails() {
-  const navigate = useNavigate()
-
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [])
