@@ -4,6 +4,8 @@ import BgImage from '../../assets/IMAGEM-SOBRE.png'
 import IconCrescer from '../../assets/SVG/ICONE-MISSAO-CRESCER.svg'
 import IconReduzir from '../../assets/SVG/ICONE-MISSAO-REDUZIR.svg'
 import IconFortalecer from '../../assets/SVG/ICONE-MISSAO-FORTALECER.svg'
+import { Contact } from '../Contact'
+import { Footer } from '../Footer'
 
 function AboutUsDetails() {
   useEffect(() => {
@@ -132,6 +134,8 @@ function AboutUsDetails() {
           </button>
         </div>
       </section>
+      <Contact />
+      <Footer />
     </div>
   )
 }

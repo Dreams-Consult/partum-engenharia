@@ -2,6 +2,8 @@ import './index.css'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import pageData from '../../data/data.json'
+import { Contact } from '../Contact'
+import { Footer } from '../Footer'
 import GuaraImg from '../../assets/projects/Guará Acqua Park/GUA-IMG-01.jpg'
 import AqualandImg from '../../assets/projects/Aqualand Resort/AQL-IMG-001.jpeg'
 import IslaCancunImg from '../../assets/projects/Isla Cancun/ISC-IMG-001.jpeg'
@@ -18,6 +20,8 @@ function ProjectDetails() {
   const { id } = useParams()
   const navigate = useNavigate()
   const [showAllPhotos, setShowAllPhotos] = useState(false)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
@@ -34,6 +38,34 @@ function ProjectDetails() {
         </div>
       </div>
     )
+  }
+
+  // Array com todas as imagens do projeto
+  const allImages = [
+    imageMap[project.image],
+    imageMap[project.image],
+    imageMap[project.image],
+    imageMap[project.image],
+    imageMap[project.image],
+    imageMap[project.image],
+    imageMap[project.image],
+  ]
+
+  const openLightbox = (index: number) => {
+    setCurrentImageIndex(index)
+    setLightboxOpen(true)
+  }
+
+  const closeLightbox = () => {
+    setLightboxOpen(false)
+  }
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % allImages.length)
+  }
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + allImages.length) % allImages.length)
   }
 
   const handleGoBack = () => {
@@ -70,30 +102,30 @@ function ProjectDetails() {
           <div className='project-section'>
             <h2 className='project-section-title'>Galeria de fotos</h2>
             <div className={`project-gallery ${showAllPhotos ? 'expanded' : ''}`}>
-              <div className='gallery-main'>
+              <div className='gallery-main' onClick={() => openLightbox(0)}>
                 <img src={imageMap[project.image]} alt={project.name} />
               </div>
               <div className='gallery-side'>
-                <div className='gallery-side-item'>
+                <div className='gallery-side-item' onClick={() => openLightbox(1)}>
                   <img src={imageMap[project.image]} alt={project.name} />
                 </div>
-                <div className='gallery-side-item'>
+                <div className='gallery-side-item' onClick={() => openLightbox(2)}>
                   <img src={imageMap[project.image]} alt={project.name} />
                 </div>
               </div>
               {showAllPhotos && (
                 <div className='gallery-expanded-grid'>
                   {/* Adicione mais imagens aqui conforme necessário */}
-                  <div className='gallery-expanded-item'>
+                  <div className='gallery-expanded-item' onClick={() => openLightbox(3)}>
                     <img src={imageMap[project.image]} alt={project.name} />
                   </div>
-                  <div className='gallery-expanded-item'>
+                  <div className='gallery-expanded-item' onClick={() => openLightbox(4)}>
                     <img src={imageMap[project.image]} alt={project.name} />
                   </div>
-                  <div className='gallery-expanded-item'>
+                  <div className='gallery-expanded-item' onClick={() => openLightbox(5)}>
                     <img src={imageMap[project.image]} alt={project.name} />
                   </div>
-                  <div className='gallery-expanded-item'>
+                  <div className='gallery-expanded-item' onClick={() => openLightbox(6)}>
                     <img src={imageMap[project.image]} alt={project.name} />
                   </div>
                 </div>
@@ -149,6 +181,29 @@ function ProjectDetails() {
           </button>
         </div>
       </section>
+      <Contact />
+      <Footer />
+
+      {/* Lightbox Modal */}
+      {lightboxOpen && (
+        <div className='lightbox-overlay' onClick={closeLightbox}>
+          <button className='lightbox-close' onClick={closeLightbox} type='button'>
+            ✕
+          </button>
+          <button className='lightbox-arrow lightbox-prev' onClick={(e) => { e.stopPropagation(); prevImage(); }} type='button'>
+            ‹
+          </button>
+          <div className='lightbox-content' onClick={(e) => e.stopPropagation()}>
+            <img src={allImages[currentImageIndex]} alt={`${project.name} - Imagem ${currentImageIndex + 1}`} />
+          </div>
+          <button className='lightbox-arrow lightbox-next' onClick={(e) => { e.stopPropagation(); nextImage(); }} type='button'>
+            ›
+          </button>
+          <div className='lightbox-counter'>
+            {currentImageIndex + 1} / {allImages.length}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

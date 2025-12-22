@@ -9,7 +9,7 @@
   margin: 0 auto;
   padding: 0 80px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 60px;
   align-items: center;
   box-sizing: border-box;
