@@ -7,6 +7,7 @@ import { Home } from './components/Home'
 import { Projects } from './components/Projects'
 import { AboutUs } from './components/AboutUs'
 import { AboutUsDetails } from './components/AboutUsDetails'
+import { ProjectDetails } from './components/ProjectDetails'
 import { Testimonials } from './components/Testimonials'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
@@ -48,6 +49,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/sobre" element={<AboutUsDetails />} />
+        <Route path="/projeto/:id" element={<ProjectDetails />} />
       </Routes>
     </>
   )

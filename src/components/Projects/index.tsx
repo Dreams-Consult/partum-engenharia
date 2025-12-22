@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import { useNavigate } from 'react-router-dom'
 import pageData from '../../data/data.json'
 import arrowLeft from '../../assets/SVG/ICON-SETA-ESQUERDA.svg'
 import arrowRight from '../../assets/SVG/ICON-SETA-DIREITA.svg'
@@ -23,6 +24,11 @@ const imageMap: Record<string, string> = {
 
 function Projects() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 })
+  const navigate = useNavigate()
+
+  const handleProjectClick = (projectId: number) => {
+    navigate(`/projeto/${projectId}`)
+  }
 
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className='projects-section' id='projects'>
@@ -68,7 +74,11 @@ function Projects() {
           >
             {pageData.projects.map((project) => (
               <SwiperSlide key={project.id}>
-                <div className='project-card'>
+                <div 
+                  className='project-card' 
+                  onClick={() => handleProjectClick(project.id)}
+                  style={{ cursor: 'pointer' }}
+                >
                   <div
                     className='project-image'
                     style={{ 
