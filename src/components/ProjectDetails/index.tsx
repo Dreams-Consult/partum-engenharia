@@ -1,6 +1,6 @@
 import './index.css'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import pageData from '../../data/data.json'
 import { Contact } from '../Contact'
 import { Footer } from '../Footer'
