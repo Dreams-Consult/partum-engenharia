@@ -65,24 +65,24 @@
   padding: 0;
 }
 
-/* Slide 1 - Banner original com a foto do rapaz */
+/* Slide 1 - Banner 1 */
 .slide-original {
   background-image: url('../../assets/banner-site.png');
 }
 
-/* Slide 2 - Gradiente azul escuro */
+/* Slide 2 - Banner 2 */
 .slide-2 {
-  background: linear-gradient(135deg, #0056b8 0%, #00a8e8 100%);
+  background-image: url('../../assets/banner-site-2.jpg');
 }
 
-/* Slide 3 - Gradiente azul médio */
+/* Slide 3 - Banner 3 */
 .slide-3 {
-  background: linear-gradient(135deg, #005a9c 0%, #0091d5 100%);
+  background-image: url('../../assets/banner-site-3.jpg');
 }
 
-/* Slide 4 - Gradiente azul profundo */
+/* Slide 4 - Banner 4 */
 .slide-4 {
-  background: linear-gradient(135deg, #003d71 0%, #0086c8 100%);
+  background-image: url('../../assets/banner-site-1.jpg');
 }
 
 .home-overlay {
@@ -289,6 +289,23 @@
     min-height: 60vh;
     height: 60vh;
     background-position: 25% center;
+  }
+
+  /* Banners mobile */
+  .slide-original {
+    background-image: url('../../assets/banner-site-mobile-1.jpg');
+  }
+
+  .slide-2 {
+    background-image: url('../../assets/banner-site-mobile-2.jpg');
+  }
+
+  .slide-3 {
+    background-image: url('../../assets/banner-site-mobile-3.jpg');
+  }
+
+  .slide-4 {
+    background-image: url('../../assets/banner-site-mobile-4.jpg');
   }
 
   .home-content {
