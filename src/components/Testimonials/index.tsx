@@ -29,6 +29,7 @@ function Testimonials() {
                 text={testimonial.text}
                 authorName={testimonial.name}
                 authorRole={`${testimonial.description} - ${testimonial.company}`}
+                authorImage={testimonial.image}
               />
             </div>
           ))}
