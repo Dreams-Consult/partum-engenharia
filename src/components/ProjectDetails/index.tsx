@@ -1,6 +1,6 @@
 import './index.css'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import pageData from '../../data/data.json'
 import { Contact } from '../Contact'
 import { Footer } from '../Footer'
@@ -22,6 +22,24 @@ function ProjectDetails() {
   const [showAllPhotos, setShowAllPhotos] = useState(false)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [heroOpacity, setHeroOpacity] = useState(1)
+  const [contentTranslate, setContentTranslate] = useState(0)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const heroHeight = 400
+      const newOpacity = Math.max(0, 1 - scrollPosition / heroHeight)
+      const translateY = Math.min(scrollPosition * 0.5, heroHeight)
+      setHeroOpacity(newOpacity)
+      setContentTranslate(translateY)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [id])
 
   const project = pageData.projects.find(p => p.id === Number(id))
 
@@ -70,7 +88,10 @@ function ProjectDetails() {
     <div className='project-details-page'>
       <section 
         className='project-details-hero animate-fade-in'
-        style={{ backgroundImage: `url(${getImageUrl(project.image)})` }}
+        style={{ 
+          backgroundImage: `url(${getImageUrl(project.image)})`,
+          opacity: heroOpacity
+        }}
       >
         <div className='project-hero-overlay'></div>
         <div className='project-hero-content animate-slide-up'>
@@ -79,7 +100,14 @@ function ProjectDetails() {
         </div>
       </section>
 
-      <section className='project-details-content'>
+      <section 
+        className='project-details-content'
+        style={{ 
+          transform: `translateY(-${contentTranslate}px)`,
+          position: 'relative',
+          zIndex: 2
+        }}
+      >
         <div className='project-details-container'>
           
           <div className='project-section animate-slide-up'>

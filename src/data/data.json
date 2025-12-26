@@ -110,8 +110,9 @@
       "id": 5,
       "name": "Kawana Park",
       "location": "Caldas Novas - Goiás",
-      "image": "/src/assets/projects/kawana-park/KWA-IMG-001.jpeg",
+      "image": "/src/assets/projects/kawana-park/SITE-PARTUM-ENGENHARIA-20.png",
       "images": [
+        "/src/assets/projects/kawana-park/SITE-PARTUM-ENGENHARIA-20.png",
         "/src/assets/projects/kawana-park/KWA-IMG-001.jpeg",
         "/src/assets/projects/kawana-park/KWA-IMG-002.jpeg"
       ],
