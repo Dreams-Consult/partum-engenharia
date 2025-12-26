@@ -6,7 +6,13 @@
       "location": "Castanhal - Pará",
       "image": "/src/assets/projects/guara-acqua-park/GUA-IMG-01.jpeg",
       "images": [
-        "/src/assets/projects/guara-acqua-park/GUA-IMG-01.jpeg"
+        "/src/assets/projects/guara-acqua-park/GUA-IMG-01.jpeg",
+        "/src/assets/projects/guara-acqua-park/GUA-IMG-02.jpg",
+        "/src/assets/projects/guara-acqua-park/GUA-IMG-04.jpg",
+        "/src/assets/projects/guara-acqua-park/GUA-IMG-08.jpg",
+        "/src/assets/projects/guara-acqua-park/GUA-IMG-18.jpeg",
+        "/src/assets/projects/guara-acqua-park/GUA-IMG-19.jpeg",
+        "/src/assets/projects/guara-acqua-park/GUA-IMG-20.jpeg"
       ],
       "description": "Parque aquático completo com infraestrutura moderna",
       "details": {
@@ -27,7 +33,14 @@
       "location": "Salinópolis - Pará",
       "image": "/src/assets/projects/aqualand-resort/AQL-IMG-001.jpeg",
       "images": [
-        "/src/assets/projects/aqualand-resort/AQL-IMG-001.jpeg"
+        "/src/assets/projects/aqualand-resort/AQL-IMG-001.jpeg",
+        "/src/assets/projects/aqualand-resort/AQL-IMG-009.jpeg",
+        "/src/assets/projects/aqualand-resort/AQL-IMG-011.jpeg",
+        "/src/assets/projects/aqualand-resort/AQL-IMG-012.jpeg",
+        "/src/assets/projects/aqualand-resort/AQL-IMG-013.jpeg",
+        "/src/assets/projects/aqualand-resort/AQL-IMG-016.jpeg",
+        "/src/assets/projects/aqualand-resort/AQL-IMG-018.jpg",
+        "/src/assets/projects/aqualand-resort/AQL-IMG-020.jpg"
       ],
       "description": "Resort de alto padrão com área de lazer aquática",
       "details": {
@@ -48,7 +61,12 @@
       "location": "Cardoso - Sao Paulo",
       "image": "/src/assets/projects/isla-cancun/ISC-IMG-001.jpeg",
       "images": [
-        "/src/assets/projects/isla-cancun/ISC-IMG-001.jpeg"
+        "/src/assets/projects/isla-cancun/ISC-IMG-001.jpeg",
+        "/src/assets/projects/isla-cancun/ISC-IMG-002.jpeg",
+        "/src/assets/projects/isla-cancun/ISC-IMG-003.jpeg",
+        "/src/assets/projects/isla-cancun/ISC-IMG-004.jpeg",
+        "/src/assets/projects/isla-cancun/ISC-IMG-005.jpeg",
+        "/src/assets/projects/isla-cancun/ISC-IMG-006.jpeg"
       ],
       "description": "Complexo turístico com parque aquático integrado",
       "details": {
@@ -69,7 +87,11 @@
       "location": "Ouro Preto do Oeste - Rondônia",
       "image": "/src/assets/projects/vale-das-cachoeiras/VLC-IMG-002.jpg",
       "images": [
-        "/src/assets/projects/vale-das-cachoeiras/VLC-IMG-002.jpg"
+        "/src/assets/projects/vale-das-cachoeiras/VLC-IMG-002.jpg",
+        "/src/assets/projects/vale-das-cachoeiras/VLC-IMG-003.jpg",
+        "/src/assets/projects/vale-das-cachoeiras/VLC-IMG-005.jpg",
+        "/src/assets/projects/vale-das-cachoeiras/VLC-IMG-007.jpg",
+        "/src/assets/projects/vale-das-cachoeiras/VLC-IMG-009.jpg"
       ],
       "description": "Parque temático com atrações aquáticas",
       "details": {
@@ -90,7 +112,8 @@
       "location": "Caldas Novas - Goiás",
       "image": "/src/assets/projects/kawana-park/KWA-IMG-001.jpeg",
       "images": [
-        "/src/assets/projects/kawana-park/KWA-IMG-001.jpeg"
+        "/src/assets/projects/kawana-park/KWA-IMG-001.jpeg",
+        "/src/assets/projects/kawana-park/KWA-IMG-002.jpeg"
       ],
       "description": "Parque temático com atrações aquáticas",
       "details": {
