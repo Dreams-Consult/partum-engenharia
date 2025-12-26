@@ -8,18 +8,14 @@ import pageData from '../../data/data.json'
 import arrowLeft from '../../assets/SVG/ICON-SETA-ESQUERDA.svg'
 import arrowRight from '../../assets/SVG/ICON-SETA-DIREITA.svg'
 
-// Importando imagens dos projetos
-import GuaraImg from '../../assets/projects/Guará Acqua Park/GUA-IMG-01.jpg'
-import AqualandImg from '../../assets/projects/Aqualand Resort/AQL-IMG-001.jpeg'
-import IslaCancunImg from '../../assets/projects/Isla Cancun/ISC-IMG-001.jpeg'
-import ValeCachoeirasImg from '../../assets/projects/Vale das Cachoeiras/VLC-IMG-002.jpg'
+// Importação dinâmica de todas as imagens dos projetos
+const images = import.meta.glob('../../assets/projects/**/*.{jpg,jpeg,png,webp}', { eager: true, query: '?url', import: 'default' }) as Record<string, string>
 
-// Mapeamento de imagens
-const imageMap: Record<string, string> = {
-  '/src/assets/projects/Guará Acqua Park/GUA-IMG-01.jpg': GuaraImg,
-  '/src/assets/projects/Aqualand Resort/AQL-IMG-001.jpeg': AqualandImg,
-  '/src/assets/projects/Isla Cancun/ISC-IMG-001.jpeg': IslaCancunImg,
-  '/src/assets/projects/Vale das Cachoeiras/VLC-IMG-002.jpg': ValeCachoeirasImg,
+// Função auxiliar para obter a imagem do caminho do JSON
+const getImageUrl = (path: string): string => {
+  const cleanPath = path.replace(/^\/src\//, '../../')
+  const imageUrl = images[cleanPath]
+  return imageUrl || path
 }
 
 function Projects() {
@@ -54,7 +50,7 @@ function Projects() {
             }}
             loop={true}
             speed={800}
-            slidesPerView={3}
+            slidesPerView={4}
             spaceBetween={20}
             breakpoints={{
               320: {
@@ -63,10 +59,14 @@ function Projects() {
               },
               768: {
                 slidesPerView: 2,
-                spaceBetween: 20
+                spaceBetween: 15
               },
               1024: {
                 slidesPerView: 3,
+                spaceBetween: 20
+              },
+              1400: {
+                slidesPerView: 4,
                 spaceBetween: 20
               }
             }}
@@ -82,7 +82,7 @@ function Projects() {
                   <div
                     className='project-image'
                     style={{ 
-                      backgroundImage: `url(${imageMap[project.image]})`,
+                      backgroundImage: `url(${getImageUrl(project.image)})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                       backgroundRepeat: 'no-repeat'

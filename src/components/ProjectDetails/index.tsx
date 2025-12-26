@@ -4,16 +4,16 @@ import { useState } from 'react'
 import pageData from '../../data/data.json'
 import { Contact } from '../Contact'
 import { Footer } from '../Footer'
-import GuaraImg from '../../assets/projects/Guará Acqua Park/GUA-IMG-01.jpg'
-import AqualandImg from '../../assets/projects/Aqualand Resort/AQL-IMG-001.jpeg'
-import IslaCancunImg from '../../assets/projects/Isla Cancun/ISC-IMG-001.jpeg'
-import ValeCachoeirasImg from '../../assets/projects/Vale das Cachoeiras/VLC-IMG-002.jpg'
 
-const imageMap: Record<string, string> = {
-  '/src/assets/projects/Guará Acqua Park/GUA-IMG-01.jpg': GuaraImg,
-  '/src/assets/projects/Aqualand Resort/AQL-IMG-001.jpeg': AqualandImg,
-  '/src/assets/projects/Isla Cancun/ISC-IMG-001.jpeg': IslaCancunImg,
-  '/src/assets/projects/Vale das Cachoeiras/VLC-IMG-002.jpg': ValeCachoeirasImg,
+// Importação dinâmica de todas as imagens dos projetos
+const images = import.meta.glob('../../assets/projects/**/*.{jpg,jpeg,png,webp}', { eager: true, query: '?url', import: 'default' }) as Record<string, string>
+
+// Função auxiliar para obter a imagem do caminho do JSON
+const getImageUrl = (path: string): string => {
+  // Remove o prefixo /src/ se existir
+  const cleanPath = path.replace(/^\/src\//, '../../')
+  const imageUrl = images[cleanPath]
+  return imageUrl || path
 }
 
 function ProjectDetails() {
@@ -36,16 +36,8 @@ function ProjectDetails() {
     )
   }
 
-  // Array com todas as imagens do projeto
-  const allImages = [
-    imageMap[project.image],
-    imageMap[project.image],
-    imageMap[project.image],
-    imageMap[project.image],
-    imageMap[project.image],
-    imageMap[project.image],
-    imageMap[project.image],
-  ]
+  // Array com todas as imagens do projeto (carregadas dinamicamente do JSON)
+  const allImages = (project.images || [project.image]).map(img => getImageUrl(img))
 
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index)
@@ -77,11 +69,11 @@ function ProjectDetails() {
   return (
     <div className='project-details-page'>
       <section 
-        className='project-details-hero'
-        style={{ backgroundImage: `url(${imageMap[project.image]})` }}
+        className='project-details-hero animate-fade-in'
+        style={{ backgroundImage: `url(${getImageUrl(project.image)})` }}
       >
         <div className='project-hero-overlay'></div>
-        <div className='project-hero-content'>
+        <div className='project-hero-content animate-slide-up'>
           <h1 className='project-details-name'>{project.name}</h1>
           <p className='project-details-location'>{project.location}</p>
         </div>
@@ -90,44 +82,42 @@ function ProjectDetails() {
       <section className='project-details-content'>
         <div className='project-details-container'>
           
-          <div className='project-section'>
+          <div className='project-section animate-slide-up'>
             <h2 className='project-section-title'>Sobre o Projeto</h2>
             <p className='project-section-text'>{project.description}</p>
           </div>
 
-          <div className='project-section'>
+          <div className='project-section animate-slide-up delay-100'>
             <h2 className='project-section-title'>Galeria de fotos</h2>
             <div className={`project-gallery ${showAllPhotos ? 'expanded' : ''}`}>
-              <div className='gallery-main' onClick={() => openLightbox(0)}>
-                <img src={imageMap[project.image]} alt={project.name} />
-              </div>
+              {allImages.length > 0 && (
+                <div className='gallery-main' onClick={() => openLightbox(0)}>
+                  <img src={allImages[0]} alt={project.name} />
+                </div>
+              )}
               <div className='gallery-side'>
-                <div className='gallery-side-item' onClick={() => openLightbox(1)}>
-                  <img src={imageMap[project.image]} alt={project.name} />
-                </div>
-                <div className='gallery-side-item' onClick={() => openLightbox(2)}>
-                  <img src={imageMap[project.image]} alt={project.name} />
-                </div>
+                {allImages.length > 1 && (
+                  <div className='gallery-side-item' onClick={() => openLightbox(1)}>
+                    <img src={allImages[1]} alt={project.name} />
+                  </div>
+                )}
+                {allImages.length > 2 && (
+                  <div className='gallery-side-item' onClick={() => openLightbox(2)}>
+                    <img src={allImages[2]} alt={project.name} />
+                  </div>
+                )}
               </div>
-              {showAllPhotos && (
+              {showAllPhotos && allImages.length > 3 && (
                 <div className='gallery-expanded-grid'>
-                  {/* Adicione mais imagens aqui conforme necessário */}
-                  <div className='gallery-expanded-item' onClick={() => openLightbox(3)}>
-                    <img src={imageMap[project.image]} alt={project.name} />
-                  </div>
-                  <div className='gallery-expanded-item' onClick={() => openLightbox(4)}>
-                    <img src={imageMap[project.image]} alt={project.name} />
-                  </div>
-                  <div className='gallery-expanded-item' onClick={() => openLightbox(5)}>
-                    <img src={imageMap[project.image]} alt={project.name} />
-                  </div>
-                  <div className='gallery-expanded-item' onClick={() => openLightbox(6)}>
-                    <img src={imageMap[project.image]} alt={project.name} />
-                  </div>
+                  {allImages.slice(3).map((image, index) => (
+                    <div key={index + 3} className='gallery-expanded-item' onClick={() => openLightbox(index + 3)}>
+                      <img src={image} alt={`${project.name} - ${index + 4}`} />
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
-            {!showAllPhotos && (
+            {!showAllPhotos && allImages.length > 3 && (
               <div className='gallery-expand-section'>
                 <button 
                   className='gallery-see-all-button'
@@ -139,7 +129,7 @@ function ProjectDetails() {
                 <p className='gallery-expand-hint'>Clique para ver mais fotos do projeto</p>
               </div>
             )}
-            {showAllPhotos && (
+            {showAllPhotos && allImages.length > 3 && (
               <button 
                 className='gallery-show-less-button'
                 onClick={() => setShowAllPhotos(false)}
@@ -150,7 +140,7 @@ function ProjectDetails() {
             )}
           </div>
 
-          <div className='project-section'>
+          <div className='project-section animate-slide-up delay-200'>
             <h2 className='project-section-title'>Detalhes Técnicos</h2>
             <div className='project-specs-grid'>
               <div className='spec-card'>

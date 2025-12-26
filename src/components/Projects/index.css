@@ -9,7 +9,7 @@
 }
 
 .projects-container {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 80px;
   position: relative;
@@ -68,7 +68,7 @@
   /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); */
   transition: all 0.4s ease;
   cursor: pointer;
-  height: 360px;
+  height: 320px;
   background: #000;
 }
 

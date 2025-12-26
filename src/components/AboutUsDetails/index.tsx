@@ -12,14 +12,14 @@ function AboutUsDetails() {
   }
   return (
     <div className='about-details-page'>
-      <section className='about-details-hero' style={{ backgroundImage: `url(${BgImage})` }}>
+      <section className='about-details-hero animate-fade-in' style={{ backgroundImage: `url(${BgImage})` }}>
         <div className='about-details-hero-content'>
         </div>
       </section>
 
       <section className='about-details-content'>
         <div className='about-details-container'>
-          <div className='about-details-section'>
+          <div className='about-details-section animate-slide-up'>
             <h2 className='about-details-title'>Nossa História</h2>
             <p className='about-details-text'>
               A história da Partum Engenharia começou com dois engenheiros — Paulo e Eduardo — que compartilhavam o 
@@ -55,10 +55,10 @@ function AboutUsDetails() {
             </p>
           </div>
 
-          <div className='about-details-section'>
+          <div className='about-details-section animate-slide-up delay-100'>
             <h2 className='about-details-title'>Nossa Missão</h2>
             <div className='mission-cards-grid'>
-              <div className='mission-card'>
+              <div className='mission-card animate-slide-from-right'>
                 <div className='gradient-top-left'></div>
                 <div className='gradient-bottom-right'></div>
                 <div className='mission-icon'>
@@ -71,7 +71,7 @@ function AboutUsDetails() {
                 </p>
               </div>
 
-              <div className='mission-card'>
+              <div className='mission-card animate-slide-from-right delay-100'>
                 <div className='gradient-top-left'></div>
                 <div className='gradient-bottom-right'></div>
                 <div className='mission-icon'>
@@ -84,7 +84,7 @@ function AboutUsDetails() {
                 </p>
               </div>
 
-              <div className='mission-card'>
+              <div className='mission-card animate-slide-from-right delay-200'>
                 <div className='gradient-top-left'></div>
                 <div className='gradient-bottom-right'></div>
                 <div className='mission-icon'>
@@ -99,7 +99,7 @@ function AboutUsDetails() {
             </div>
           </div>
 
-          <div className='about-details-section'>
+          <div className='about-details-section animate-slide-from-left delay-200'>
             <h2 className='about-details-title'>Nossa Visão</h2>
             <p className='about-details-text'>
               Transformar paisagens em destinos de felicidade, criando espaços que geram experiências memoráveis para as 
@@ -113,7 +113,7 @@ function AboutUsDetails() {
             </p>
           </div>
 
-          <div className='about-details-section'>
+          <div className='about-details-section animate-slide-up delay-300'>
             <h2 className='about-details-title'>Nossos Valores</h2>
             <ul className='about-details-list'>
               <li><strong>Não temos braço curto.</strong> Fazemos o que tem que ser feito.</li>
