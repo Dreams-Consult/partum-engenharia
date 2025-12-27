@@ -17,11 +17,13 @@ function MainPage() {
   return (
     <>
       <Home />
-      <Projects />
-      <AboutUs />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <div className="main-content-wrapper">
+        <Projects />
+        <AboutUs />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </div>
     </>
   )
 }

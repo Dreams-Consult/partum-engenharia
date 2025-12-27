@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Guará Acqua Park",
+      "logo": "/src/assets/projects/guara-acqua-park/SITE-PARTUM-ENGENHARIA-10.png",
       "location": "Castanhal - Pará",
       "image": "/src/assets/projects/guara-acqua-park/GUA-IMG-01.jpeg",
       "images": [
@@ -14,7 +15,7 @@
         "/src/assets/projects/guara-acqua-park/GUA-IMG-19.jpeg",
         "/src/assets/projects/guara-acqua-park/GUA-IMG-20.jpeg"
       ],
-      "description": "Parque aquático completo com infraestrutura moderna",
+      "description": "Um dos locais de lazer preferidos do público paraense. Atuamos com projetos e construção de sua expansão incluindo Piscina Kids, Piscina de Ondas, Rio Lento e Toboáguas.",
       "details": {
         "area": "15.000 m²",
         "year": "2021",
@@ -30,8 +31,9 @@
     {
       "id": 2,
       "name": "Aqualand Resort",
+      "logo": "/src/assets/projects/aqualand-resort/279081821_3149623401955315_7842032593126096994_n.jpg",
       "location": "Salinópolis - Pará",
-      "image": "/src/assets/projects/aqualand-resort/AQL-IMG-001.jpeg",
+      "image": "/src/assets/projects/aqualand-resort/sample-1.jpg",
       "images": [
         "/src/assets/projects/aqualand-resort/AQL-IMG-001.jpeg",
         "/src/assets/projects/aqualand-resort/AQL-IMG-009.jpeg",
@@ -42,7 +44,7 @@
         "/src/assets/projects/aqualand-resort/AQL-IMG-018.jpg",
         "/src/assets/projects/aqualand-resort/AQL-IMG-020.jpg"
       ],
-      "description": "Resort de alto padrão com área de lazer aquática",
+      "description": "Projeto e construção de piscina de ondas e Rio Lento. Projetos e execução desde o início da construção em novembro de 2019 até a entrega da obra em julho de 2021 e por fim sua primeira expansão, a construção de uma torre com dois Toboáguas, entregues em julho de 2023.",
       "details": {
         "area": "20.000 m²",
         "year": "2022",
@@ -58,7 +60,8 @@
     {
       "id": 3,
       "name": "Isla Cancun Resort",
-      "location": "Cardoso - Sao Paulo",
+      "logo": "/src/assets/projects/isla-cancun/SITE-PARTUM-ENGENHARIA-32.png",
+      "location": "Cardoso - São Paulo",
       "image": "/src/assets/projects/isla-cancun/ISC-IMG-001.jpeg",
       "images": [
         "/src/assets/projects/isla-cancun/ISC-IMG-001.jpeg",
@@ -68,7 +71,7 @@
         "/src/assets/projects/isla-cancun/ISC-IMG-005.jpeg",
         "/src/assets/projects/isla-cancun/ISC-IMG-006.jpeg"
       ],
-      "description": "Complexo turístico com parque aquático integrado",
+      "description": "Projeto e construção do parque aquático desde o início de sua construção em agosto de 2019 até sua entrega em novembro de 2022.",
       "details": {
         "area": "30.000 m²",
         "year": "2020",
@@ -84,6 +87,7 @@
     {
       "id": 4,
       "name": "Vale das Cachoeiras Water Park",
+      "logo": "/src/assets/projects/vale-das-cachoeiras/SITE-PARTUM-ENGENHARIA-24.png",
       "location": "Ouro Preto do Oeste - Rondônia",
       "image": "/src/assets/projects/vale-das-cachoeiras/VLC-IMG-002.jpg",
       "images": [
@@ -93,7 +97,7 @@
         "/src/assets/projects/vale-das-cachoeiras/VLC-IMG-007.jpg",
         "/src/assets/projects/vale-das-cachoeiras/VLC-IMG-009.jpg"
       ],
-      "description": "Parque temático com atrações aquáticas",
+      "description": "Projeto e construção de piscina de ondas. Obra Concluída em outubro de 2019.",
       "details": {
         "area": "12.000 m²",
         "year": "2023",
@@ -109,6 +113,7 @@
     {
       "id": 5,
       "name": "Kawana Park",
+      "logo": "/src/assets/projects/kawana-park/SITE-PARTUM-ENGENHARIA-19-e1689768780534.png",
       "location": "Caldas Novas - Goiás",
       "image": "/src/assets/projects/kawana-park/SITE-PARTUM-ENGENHARIA-20.png",
       "images": [
@@ -116,7 +121,7 @@
         "/src/assets/projects/kawana-park/KWA-IMG-001.jpeg",
         "/src/assets/projects/kawana-park/KWA-IMG-002.jpeg"
       ],
-      "description": "Parque temático com atrações aquáticas",
+      "description": "Atuamos no Projeto e construção de piscina de Ondas e piscina Infantil, Obra entregue em junho de 2021.",
       "details": {
         "area": "12.000 m²",
         "year": "2023",

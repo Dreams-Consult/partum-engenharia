@@ -1,4 +1,5 @@
 import './index.css'
+import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
@@ -37,6 +38,19 @@ const CAROUSEL_SLIDES: CarouselSlide[] = [
 ]
 
 function Home() {
+  const [bannerOpacity, setBannerOpacity] = useState(1)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const heroHeight = window.innerHeight
+      const newOpacity = Math.max(0, 1 - (scrollPosition / heroHeight) * 1.5)
+      setBannerOpacity(newOpacity)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   const scrollToContact = () => {
     const element = document.getElementById('contact')
     if (element) {
@@ -45,7 +59,7 @@ function Home() {
   }
 
   return (
-    <section className="home-carousel-wrapper" id="home">
+    <section className="home-carousel-wrapper" id="home" style={{ opacity: bannerOpacity }}>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation={{

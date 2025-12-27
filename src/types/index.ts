@@ -6,6 +6,22 @@ export interface CarouselSlide {
   subtitle: string
 }
 
+export interface Project {
+  id: number
+  name: string
+  logo?: string
+  location: string
+  image: string
+  images?: string[]
+  description: string
+  details: {
+    area: string
+    year: string
+    category: string
+    services: string[]
+  }
+}
+
 export interface NavItem {
   id: string
   label: string

@@ -9,6 +9,14 @@
   background-color: #0D162B;
 }
 
+.main-content-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-top: 100vh;
+  background: #0D162B;
+  min-height: 100vh;
+}
+
 .whatsapp-icon {
   position: fixed;
   bottom: 20px;

@@ -123,9 +123,9 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .about-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     padding: 0 40px;
   }

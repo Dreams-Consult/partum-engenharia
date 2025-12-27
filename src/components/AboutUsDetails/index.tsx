@@ -1,5 +1,5 @@
 import './index.css'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import BgImage from '../../assets/IMAGEM-SOBRE.png'
 import IconCrescer from '../../assets/SVG/ICONE-MISSAO-CRESCER.svg'
 import IconReduzir from '../../assets/SVG/ICONE-MISSAO-REDUZIR.svg'
@@ -8,23 +8,8 @@ import { Contact } from '../Contact'
 import { Footer } from '../Footer'
 
 function AboutUsDetails() {
-  const [heroOpacity, setHeroOpacity] = useState(1)
-  const [contentTranslate, setContentTranslate] = useState(0)
-
   useEffect(() => {
     window.scrollTo(0, 0)
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY
-      const heroHeight = 400
-      const newOpacity = Math.max(0, 1 - scrollPosition / heroHeight)
-      const translateY = Math.min(scrollPosition * 0.5, heroHeight)
-      setHeroOpacity(newOpacity)
-      setContentTranslate(translateY)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const handleGoBack = () => {
@@ -35,22 +20,17 @@ function AboutUsDetails() {
       <section 
         className='about-details-hero animate-fade-in' 
         style={{ 
-          backgroundImage: `url(${BgImage})`,
-          opacity: heroOpacity
+          backgroundImage: `url(${BgImage})`
         }}
       >
-        <div className='about-details-hero-content'>
-        </div>
       </section>
 
-      <section 
-        className='about-details-content' 
-        style={{ 
-          transform: `translateY(-${contentTranslate}px)`,
-          position: 'relative',
-          zIndex: 2
-        }}
-      >
+      <div className='about-details-hero-content-wrapper'>
+        <div className='about-details-hero-content'>
+        </div>
+      </div>
+
+      <section className='about-details-content'>
         <div className='about-details-container'>
           <div className='about-details-section animate-slide-up'>
             <h2 className='about-details-title'>Nossa História</h2>

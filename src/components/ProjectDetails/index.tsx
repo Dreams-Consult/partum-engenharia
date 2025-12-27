@@ -23,18 +23,15 @@ function ProjectDetails() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [heroOpacity, setHeroOpacity] = useState(1)
-  const [contentTranslate, setContentTranslate] = useState(0)
 
   useEffect(() => {
     window.scrollTo(0, 0)
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY
-      const heroHeight = 400
-      const newOpacity = Math.max(0, 1 - scrollPosition / heroHeight)
-      const translateY = Math.min(scrollPosition * 0.5, heroHeight)
+      const heroHeight = window.innerHeight * 0.65
+      const newOpacity = Math.max(0, 1 - (scrollPosition / heroHeight) * 1.5)
       setHeroOpacity(newOpacity)
-      setContentTranslate(translateY)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -94,20 +91,25 @@ function ProjectDetails() {
         }}
       >
         <div className='project-hero-overlay'></div>
+      </section>
+
+      <div className='project-hero-content-wrapper'>
         <div className='project-hero-content animate-slide-up'>
+          {project.logo && (
+            <div className='project-logo-container'>
+              <img 
+                src={getImageUrl(project.logo)} 
+                alt={`${project.name} logo`} 
+                className='project-logo'
+              />
+            </div>
+          )}
           <h1 className='project-details-name'>{project.name}</h1>
           <p className='project-details-location'>{project.location}</p>
         </div>
-      </section>
+      </div>
 
-      <section 
-        className='project-details-content'
-        style={{ 
-          transform: `translateY(-${contentTranslate}px)`,
-          position: 'relative',
-          zIndex: 2
-        }}
-      >
+      <section className='project-details-content'>
         <div className='project-details-container'>
           
           <div className='project-section animate-slide-up'>

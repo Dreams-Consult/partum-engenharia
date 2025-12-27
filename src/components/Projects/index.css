@@ -248,8 +248,8 @@
   }
 }
 
-/* Responsividade para tablets pequenos */
-@media (max-width: 768px) {
+/* Responsividade para tablets e mobile */
+@media (max-width: 1024px) {
   .projects-section {
     padding: 60px 0;
   }

@@ -4,7 +4,7 @@ import BgProjetos from '../../assets/BG-PROJETOS.svg'
 import LogoPartum from '../../assets/SVG/LOGO-COR2-V2.svg'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
-const ABOUT_TITLE = 'Sobre a Partum'
+const ABOUT_TITLE = 'Quem somos nós?'
 const ABOUT_SUBTITLE = 'Engenharia que cria destinos'
 const ABOUT_INTRO = 'Mais do que obras, a Partum constrói experiências. Reconhecida por sua atuação em parques aquáticos e resorts, a empresa alia conhecimento técnico, gestão eficiente e visão estratégica para entregar projetos que geram valor e diversão.'
 
