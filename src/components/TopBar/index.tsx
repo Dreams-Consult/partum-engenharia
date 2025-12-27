@@ -1,5 +1,5 @@
 import './index.css'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 import PartumLogo from '../../assets/SVG/LOGO-COR2-H2.svg'
 import type { NavItem } from '../../types'
 import { useState } from 'react'
@@ -18,7 +18,24 @@ function Topbar() {
   const location = useLocation()
 
   const scrollToSection = (sectionId: string): void => {
-    // Se estamos na página de sobre, navega para home primeiro
+    setIsMenuOpen(false)
+    
+    // Se for home, navega para a rota principal e rola para o topo
+    if (sectionId === 'home') {
+      if (location.pathname !== '/') {
+        navigate('/')
+        // Aguarda navegação e depois rola para o topo
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }, 100)
+      } else {
+        // Já está na home, apenas rola para o topo
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+      return
+    }
+
+    // Para outras seções, navega para home se necessário
     if (location.pathname !== '/') {
       navigate('/')
       // Aguarda um momento para a página carregar antes de fazer scroll
@@ -35,19 +52,24 @@ function Topbar() {
         element.scrollIntoView({ behavior: 'smooth' })
       }
     }
-    setIsMenuOpen(false)
   }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
   return (
     <nav className='topBar'>
       <div className='topBar-container'>
-        <div className='logoBar' onClick={() => scrollToSection('home')} style={{ cursor: 'pointer' }}>
+        <Link to='/' className='logoBar' style={{ cursor: 'pointer' }} onClick={handleLogoClick}>
           <img src={PartumLogo} alt='Partum Engenharia' width="200" height="100" />
-        </div>
+        </Link>
 
         <div className={`navBar ${isMenuOpen ? 'nav-open' : ''}`}>
           {NAV_ITEMS.map(item => (
