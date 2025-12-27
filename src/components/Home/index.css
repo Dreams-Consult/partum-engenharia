@@ -59,12 +59,12 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
-  padding: 0;
+  padding: 0 80px;
 }
 
 /* Slide 1 - Banner 1 */
@@ -102,10 +102,10 @@
   z-index: 2;
   text-align: left;
   color: #ffffff;
-  max-width: 1400px;
+  max-width: 700px;
   width: 100%;
-  padding: 2rem 80px;
-  margin: 0 auto;
+  padding: 2rem 80px 2rem 80px;
+  margin: 0;
   animation: fadeInContent 1s ease-in;
 }
 
@@ -131,21 +131,21 @@
 }
 
 .home-title {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: 1px;
-  margin: 1rem 0;
+  margin: 0.8rem 0;
   color: white;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
   line-height: 1.2;
 }
 
 .home-subtitle {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.6;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.5rem;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -154,15 +154,15 @@
   background: #4a9fd8;
   color: white;
   border: none;
-  padding: 12px 30px;
-  font-size: 1.5rem;
+  padding: 10px 25px;
+  font-size: 1.2rem;
   font-weight: 600;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: capitalize;
   box-shadow: 0 4px 15px rgba(74, 159, 216, 0.4);
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 }
 
 .home-cta-button:hover {
@@ -215,20 +215,21 @@
 /* Responsividade para tablets */
 @media (max-width: 1024px) {
   .home-content {
-    padding: 2rem 60px;
+    padding: 2rem 40px 2rem 40px;
+    max-width: 600px;
   }
 
   .home-title {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 
   .home-subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .home-cta-button {
-    padding: 13px 28px;
-    font-size: 0.95rem;
+    padding: 10px 22px;
+    font-size: 1.1rem;
   }
 }
 
@@ -254,20 +255,22 @@
   .home-section {
     background-position: 30% center;
     justify-content: center;
+    padding: 0;
   }
 
   .home-content {
     padding: 1.5rem 40px;
     text-align: center;
     max-width: 90%;
+    margin: 0 auto;
   }
 
   .home-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .home-subtitle {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5;
   }
 
