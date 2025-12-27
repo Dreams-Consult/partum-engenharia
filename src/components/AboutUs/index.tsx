@@ -13,8 +13,8 @@ function AboutUs() {
 
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className='about-section' id='about' style={{ backgroundImage: `url(${BgProjetos})` }}>
-      <div className={`about-container scroll-animate scroll-fade-in-left ${isVisible ? 'is-visible' : ''}`}>
-        <div className='about-content'>
+      <div className='about-container'>
+        <div className={`about-content scroll-animate scroll-fade-in-left ${isVisible ? 'is-visible' : ''}`}>
           <p className='about-label'>{ABOUT_TITLE}</p>
           <h2 className='about-title'>{ABOUT_SUBTITLE}</h2>
           <p className='about-intro'>{ABOUT_INTRO}</p>
@@ -24,7 +24,7 @@ function AboutUs() {
           </Link>
         </div>
         
-        <div className='about-logo'>
+        <div className={`about-logo scroll-animate scroll-fade-in-right ${isVisible ? 'is-visible' : ''}`}>
           <img src={LogoPartum} alt='Partum Engenharia' />
         </div>
       </div>
