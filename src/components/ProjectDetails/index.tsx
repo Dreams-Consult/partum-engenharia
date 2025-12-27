@@ -206,15 +206,17 @@ function ProjectDetails() {
           <button className='lightbox-close' onClick={closeLightbox} type='button'>
             ✕
           </button>
-          <button className='lightbox-arrow lightbox-prev' onClick={(e) => { e.stopPropagation(); prevImage(); }} type='button'>
-            ‹
-          </button>
-          <div className='lightbox-content' onClick={(e) => e.stopPropagation()}>
-            <img src={allImages[currentImageIndex]} alt={`${project.name} - Imagem ${currentImageIndex + 1}`} />
+          <div className='lightbox-container'>
+            <button className='lightbox-arrow lightbox-prev' onClick={(e) => { e.stopPropagation(); prevImage(); }} type='button'>
+              ‹
+            </button>
+            <div className='lightbox-content' onClick={(e) => e.stopPropagation()}>
+              <img src={allImages[currentImageIndex]} alt={`${project.name} - Imagem ${currentImageIndex + 1}`} />
+            </div>
+            <button className='lightbox-arrow lightbox-next' onClick={(e) => { e.stopPropagation(); nextImage(); }} type='button'>
+              ›
+            </button>
           </div>
-          <button className='lightbox-arrow lightbox-next' onClick={(e) => { e.stopPropagation(); nextImage(); }} type='button'>
-            ›
-          </button>
           <div className='lightbox-counter'>
             {currentImageIndex + 1} / {allImages.length}
           </div>
