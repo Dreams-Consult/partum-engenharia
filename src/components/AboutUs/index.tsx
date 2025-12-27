@@ -1,7 +1,7 @@
 import './index.css'
 import { Link } from 'react-router-dom'
-import BgProjetos from '../../assets/BG-PROJETOS.svg'
-import LogoPartum from '../../assets/SVG/LOGO-COR2-V2.svg'
+import BgProjetos from '../../assets/svg/BG-PROJETOS.svg'
+import LogoPartum from '../../assets/svg/LOGO-COR2-V2.svg'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const ABOUT_TITLE = 'Quem somos nós?'
