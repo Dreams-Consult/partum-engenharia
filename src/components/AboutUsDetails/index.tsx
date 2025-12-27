@@ -1,5 +1,5 @@
 import './index.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import BgImage from '../../assets/IMAGEM-SOBRE.png'
 import IconCrescer from '../../assets/SVG/ICONE-MISSAO-CRESCER.svg'
 import IconReduzir from '../../assets/SVG/ICONE-MISSAO-REDUZIR.svg'
@@ -8,8 +8,20 @@ import { Contact } from '../Contact'
 import { Footer } from '../Footer'
 
 function AboutUsDetails() {
+  const [heroOpacity, setHeroOpacity] = useState(1)
+
   useEffect(() => {
     window.scrollTo(0, 0)
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const heroHeight = window.innerHeight
+      const newOpacity = Math.max(0, 1 - (scrollPosition / heroHeight) * 1.5)
+      setHeroOpacity(newOpacity)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const handleGoBack = () => {
@@ -20,7 +32,8 @@ function AboutUsDetails() {
       <section 
         className='about-details-hero animate-fade-in' 
         style={{ 
-          backgroundImage: `url(${BgImage})`
+          backgroundImage: `url(${BgImage})`,
+          opacity: heroOpacity
         }}
       >
       </section>
