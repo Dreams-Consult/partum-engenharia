@@ -31,7 +31,7 @@
     {
       "id": 2,
       "name": "Aqualand Resort",
-      "logo": "/src/assets/projects/aqualand-resort/279081821_3149623401955315_7842032593126096994_n.jpg",
+      "logo": "/src/assets/projects/aqualand-resort/aqualand-logo.png",
       "location": "Salinópolis - Pará",
       "image": "/src/assets/projects/aqualand-resort/sample-1.jpg",
       "images": [
@@ -60,7 +60,7 @@
     {
       "id": 3,
       "name": "Isla Cancun Resort",
-      "logo": "/src/assets/projects/isla-cancun/SITE-PARTUM-ENGENHARIA-32.png",
+      "logo": "/src/assets/projects/isla-cancun/SITE-PARTUM-ENGENHARIA-33.png",
       "location": "Cardoso - São Paulo",
       "image": "/src/assets/projects/isla-cancun/ISC-IMG-001.jpeg",
       "images": [
@@ -115,9 +115,8 @@
       "name": "Kawana Park",
       "logo": "/src/assets/projects/kawana-park/SITE-PARTUM-ENGENHARIA-19-e1689768780534.png",
       "location": "Caldas Novas - Goiás",
-      "image": "/src/assets/projects/kawana-park/SITE-PARTUM-ENGENHARIA-20.png",
+      "image": "/src/assets/projects/kawana-park/KWA-IMG-002.jpeg",
       "images": [
-        "/src/assets/projects/kawana-park/SITE-PARTUM-ENGENHARIA-20.png",
         "/src/assets/projects/kawana-park/KWA-IMG-001.jpeg",
         "/src/assets/projects/kawana-park/KWA-IMG-002.jpeg"
       ],
@@ -125,6 +124,33 @@
       "details": {
         "area": "12.000 m²",
         "year": "2023",
+        "category": "Parque Aquático",
+        "services": [
+          "Projeto arquitetônico",
+          "Projeto de piscinas",
+          "Execução de obra",
+          "Fiscalização"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Vale das Minas Park",
+      "logo": "/src/assets/projects/vale-das-minas/vale-das-minas-logo.png",
+      "location": "Caldas Novas - Goiás",
+      "image": "/src/assets/projects/vale-das-minas/GERAL ENTRADA.jpg",
+      "images": [
+        "/src/assets/projects/vale-das-minas/GERAL ENTRADA.jpg",
+        "/src/assets/projects/vale-das-minas/GERAL3.jpg",
+        "/src/assets/projects/vale-das-minas/GERAL4.png",
+        "/src/assets/projects/vale-das-minas/PISCINADEONDAS-GERAL.jpg",
+        "/src/assets/projects/vale-das-minas/Rio lento.jpg",
+        "/src/assets/projects/vale-das-minas/SUPERIORPISCINA DE ONDAS E BARMOLHADO.jpg"
+      ],
+      "description": "Projeto e construção de parque aquático completo com piscina de ondas, rio lento e área kids.",
+      "details": {
+        "area": "18.000 m²",
+        "year": "2024",
         "category": "Parque Aquático",
         "services": [
           "Projeto arquitetônico",
