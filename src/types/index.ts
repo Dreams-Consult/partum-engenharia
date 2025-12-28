@@ -18,6 +18,8 @@ export interface Project {
     area: string
     year: string
     category: string
+    capacity?: string
+    features?: string[]
     services: string[]
   }
 }

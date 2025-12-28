@@ -373,6 +373,90 @@
   margin: 0;
 }
 
+/* Features Section */
+.project-features {
+  margin-top: 50px;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(74, 159, 216, 0.1) 0%, rgba(94, 179, 228, 0.05) 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(74, 159, 216, 0.2);
+}
+
+.features-title {
+  color: #7ec4e8;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.feature-item {
+  color: #e8f0f7;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 15px 20px;
+  background: rgba(74, 159, 216, 0.1);
+  border-radius: 10px;
+  border-left: 4px solid #4a9fd8;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: rgba(74, 159, 216, 0.2);
+  transform: translateX(5px);
+}
+
+/* Services Section */
+.project-services {
+  margin-top: 40px;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(94, 179, 228, 0.1) 0%, rgba(74, 159, 216, 0.05) 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(94, 179, 228, 0.2);
+}
+
+.services-title {
+  color: #7ec4e8;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.service-item {
+  color: #e8f0f7;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 15px 20px;
+  background: rgba(94, 179, 228, 0.1);
+  border-radius: 10px;
+  border-left: 4px solid #5eb3e4;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  background: rgba(94, 179, 228, 0.2);
+  transform: translateX(5px);
+}
+
 .project-back-button {
   display: block;
   margin: 30px auto 0;
@@ -596,6 +680,33 @@
     width: 100%;
   }
 
+  .project-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .features-list,
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .project-features,
+  .project-services {
+    padding: 30px 20px;
+  }
+
+  .features-title,
+  .services-title {
+    font-size: 1.5rem;
+  }
+
+  .feature-item,
+  .service-item {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+
   .project-back-button {
     padding: 15px 40px;
     font-size: 1rem;
@@ -627,6 +738,17 @@
 
   .project-section-title {
     font-size: 1.6rem;
+  }
+
+  .features-title,
+  .services-title {
+    font-size: 1.3rem;
+  }
+
+  .feature-item,
+  .service-item {
+    font-size: 0.9rem;
+    padding: 10px 12px;
   }
 }
 

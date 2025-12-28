@@ -18,13 +18,22 @@
       "description": "Um dos locais de lazer preferidos do público paraense. Atuamos com projetos e construção de sua expansão incluindo Piscina Kids, Piscina de Ondas, Rio Lento e Toboáguas.",
       "details": {
         "area": "15.000 m²",
-        "year": "2021",
+        "year": "2021-2024",
         "category": "Parque Aquático",
+        "capacity": "2.500 visitantes/dia",
+        "features": [
+          "Piscina de Ondas - 800 m²",
+          "Rio Lento - 250 metros",
+          "Piscina Kids com brinquedos interativos",
+          "Torre com 4 Toboáguas",
+          "Sistema de recirculação e tratamento"
+        ],
         "services": [
-          "Projeto arquitetônico",
-          "Projeto estrutural",
+          "Master Plan de expansão",
+          "Projeto arquitetônico e estrutural",
+          "Projeto hidráulico completo",
           "Execução de obra",
-          "Consultoria técnica"
+          "Consultoria técnica especializada"
         ]
       }
     },
@@ -47,13 +56,22 @@
       "description": "Projeto e construção de piscina de ondas e Rio Lento. Projetos e execução desde o início da construção em novembro de 2019 até a entrega da obra em julho de 2021 e por fim sua primeira expansão, a construção de uma torre com dois Toboáguas, entregues em julho de 2023.",
       "details": {
         "area": "20.000 m²",
-        "year": "2022",
-        "category": "Resort",
+        "year": "2019-2023",
+        "category": "Resort e Parque Aquático",
+        "capacity": "3.000 visitantes/dia",
+        "features": [
+          "Piscina de Ondas - 1.200 m²",
+          "Rio Lento - 300 metros",
+          "Torre com 2 Toboáguas radicais",
+          "Área de hospedagem integrada",
+          "Casa de máquinas completa"
+        ],
         "services": [
-          "Projeto arquitetônico",
-          "Projeto hidráulico",
-          "Consultoria técnica",
-          "Gestão de obra"
+          "Projeto arquitetônico completo",
+          "Projeto estrutural e hidráulico",
+          "Execução total da obra",
+          "Expansão e modernização",
+          "Gestão e consultoria técnica"
         ]
       }
     },
@@ -74,13 +92,22 @@
       "description": "Projeto e construção do parque aquático desde o início de sua construção em agosto de 2019 até sua entrega em novembro de 2022.",
       "details": {
         "area": "30.000 m²",
-        "year": "2020",
+        "year": "2019-2022",
         "category": "Complexo Turístico",
+        "capacity": "4.000 visitantes/dia",
+        "features": [
+          "Piscina de Ondas de grande porte",
+          "Rio Lento - 400 metros",
+          "Complexo de Toboáguas",
+          "Área kids temática",
+          "Infraestrutura completa de resort"
+        ],
         "services": [
-          "Master Plan",
-          "Projeto arquitetônico",
-          "Projeto estrutural",
-          "Execução de obra"
+          "Master Plan completo",
+          "Projeto arquitetônico e paisagístico",
+          "Projeto estrutural e hidráulico",
+          "Execução integral da obra",
+          "Acompanhamento e fiscalização"
         ]
       }
     },
@@ -100,13 +127,22 @@
       "description": "Projeto e construção de piscina de ondas. Obra Concluída em outubro de 2019.",
       "details": {
         "area": "12.000 m²",
-        "year": "2023",
+        "year": "2019",
         "category": "Parque Aquático",
+        "capacity": "2.000 visitantes/dia",
+        "features": [
+          "Piscina de Ondas - 750 m²",
+          "Sistema de ondas pneumático",
+          "Área de recreação aquática",
+          "Play Kids em desenvolvimento",
+          "Casa de máquinas moderna"
+        ],
         "services": [
-          "Projeto arquitetônico",
-          "Projeto de piscinas",
-          "Execução de obra",
-          "Fiscalização"
+          "Projeto arquitetônico detalhado",
+          "Projeto hidráulico de piscinas",
+          "Execução da obra civil",
+          "Instalação de equipamentos",
+          "Fiscalização técnica"
         ]
       }
     },
@@ -123,13 +159,22 @@
       "description": "Atuamos no Projeto e construção de piscina de Ondas e piscina Infantil, Obra entregue em junho de 2021.",
       "details": {
         "area": "12.000 m²",
-        "year": "2023",
-        "category": "Parque Aquático",
+        "year": "2021",
+        "category": "Parque Aquático de Águas Termais",
+        "capacity": "2.200 visitantes/dia",
+        "features": [
+          "Piscina de Ondas - 900 m²",
+          "Piscina Infantil aquecida",
+          "Águas termais naturais",
+          "Deck solarium",
+          "Sistema de aquecimento"
+        ],
         "services": [
-          "Projeto arquitetônico",
-          "Projeto de piscinas",
-          "Execução de obra",
-          "Fiscalização"
+          "Projeto arquitetônico especializado",
+          "Projeto de piscinas termais",
+          "Execução da obra",
+          "Instalações hidráulicas",
+          "Fiscalização e controle de qualidade"
         ]
       }
     },
@@ -137,7 +182,7 @@
       "id": 6,
       "name": "Vale das Minas Park",
       "logo": "/src/assets/projects/vale-das-minas/vale-das-minas-logo.png",
-      "location": "Caldas Novas - Goiás",
+      "location": "Parauapebas - Pará",
       "image": "/src/assets/projects/vale-das-minas/GERAL ENTRADA.jpg",
       "images": [
         "/src/assets/projects/vale-das-minas/GERAL ENTRADA.jpg",
@@ -147,16 +192,25 @@
         "/src/assets/projects/vale-das-minas/Rio lento.jpg",
         "/src/assets/projects/vale-das-minas/SUPERIORPISCINA DE ONDAS E BARMOLHADO.jpg"
       ],
-      "description": "Projeto e construção de parque aquático completo com piscina de ondas, rio lento e área kids.",
+      "description": "O Vale das Minas Park é um moderno parque aquático em construção em Parauapebas, no sudeste do Pará, projetado para se tornar um novo marco de lazer e entretenimento da região dos Carajás.",
       "details": {
         "area": "18.000 m²",
-        "year": "2024",
+        "year": "2024-2025",
         "category": "Parque Aquático",
+        "capacity": "3.500 visitantes/dia",
+        "features": [
+          "Piscina de Ondas - 1.000 m²",
+          "Rio Lento - 350 metros",
+          "Bar molhado integrado",
+          "Área de entrada panorâmica",
+          "Infraestrutura completa"
+        ],
         "services": [
-          "Projeto arquitetônico",
-          "Projeto de piscinas",
-          "Execução de obra",
-          "Fiscalização"
+          "Projeto arquitetônico completo",
+          "Projeto hidráulico de piscinas",
+          "Execução total da obra",
+          "Gestão e coordenação",
+          "Fiscalização técnica especializada"
         ]
       }
     }

@@ -175,21 +175,43 @@ function ProjectDetails() {
             <div className='project-specs-grid'>
               <div className='spec-card'>
                 <h3>Área Total</h3>
-                <p>Informações a serem adicionadas</p>
+                <p>{project.details.area}</p>
               </div>
               <div className='spec-card'>
                 <h3>Capacidade</h3>
-                <p>Informações a serem adicionadas</p>
+                <p>{project.details.capacity || 'Informações a serem adicionadas'}</p>
               </div>
               <div className='spec-card'>
                 <h3>Prazo de Execução</h3>
-                <p>Informações a serem adicionadas</p>
+                <p>{project.details.year}</p>
               </div>
               <div className='spec-card'>
                 <h3>Status</h3>
-                <p>Informações a serem adicionadas</p>
+                <p>{project.details.category}</p>
               </div>
             </div>
+            
+            {project.details.features && project.details.features.length > 0 && (
+              <div className='project-features'>
+                <h3 className='features-title'>Características do Projeto</h3>
+                <ul className='features-list'>
+                  {project.details.features.map((feature, index) => (
+                    <li key={index} className='feature-item'>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            
+            {project.details.services && project.details.services.length > 0 && (
+              <div className='project-services'>
+                <h3 className='services-title'>Serviços Prestados</h3>
+                <ul className='services-list'>
+                  {project.details.services.map((service, index) => (
+                    <li key={index} className='service-item'>{service}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
 
           <button className='project-back-button' onClick={handleGoBack} type='button'>
