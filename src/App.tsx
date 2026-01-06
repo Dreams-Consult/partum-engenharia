@@ -1,6 +1,6 @@
 import './App.css'
 import './styles/animations.css'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import LogoWhatsapp from './assets/svg/whatsapp-svgrepo-com.svg'
 import { Topbar } from './components/TopBar'
 import { Home } from './components/Home'
@@ -52,6 +52,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/sobre" element={<AboutUsDetails />} />
         <Route path="/projeto/:id" element={<ProjectDetails />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   )
