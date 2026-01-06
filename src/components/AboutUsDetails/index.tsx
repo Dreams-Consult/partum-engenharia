@@ -46,38 +46,24 @@ function AboutUsDetails() {
       <section className='about-details-content'>
         <div className='about-details-container'>
           <div className='about-details-section animate-slide-up'>
-            <h2 className='about-details-title'>Nossa História</h2>
+            <h2 className='about-details-title'>A História da Partum Engenharia: Da Visão Individual à Grande Realização</h2>
             <p className='about-details-text'>
-              A história da Partum Engenharia começou com dois engenheiros — Paulo e Eduardo — que compartilhavam o 
-              mesmo propósito: transformar ideias em grandes realizações.
+              A jornada da Partum Engenharia começou com a visão e o propósito de um engenheiro: Paulo. Sua atuação teve início em São José do Rio Preto (SP), focado na construção de casas – incluindo diversos projetos do programa Minha Casa Minha Vida – e, logo, expandindo para condomínios. Desde o princípio, o compromisso era inabalável com a qualidade e a inovação.
             </p>
             <p className='about-details-text'>
-              No início, o foco era construir casas em Ouro Preto (MG), incluindo diversos projetos do programa Minha Casa 
-              Minha Vida. Com o tempo, eles passaram a atuar também em condomínios, sempre com o olhar voltado à 
-              qualidade e à inovação.
+              Foi então que um novo e desafiador horizonte se abriu: o dono de um hotel em Olímpia (SP), interessado em construir um parque aquático, recebeu a indicação de Paulo para desenvolver o projeto de uma piscina de ondas. Mesmo sem experiência específica nesse tipo de obra, Paulo enxergou na oportunidade um convite irrecusável para crescer – e aceitou o desafio.
             </p>
             <p className='about-details-text'>
-              Foi então que um novo desafio cruzou o caminho da dupla: o dono de um hotel em Olímpia (SP), interessado em 
-              construir um parque aquático, recebeu a indicação de Paulo e Eduardo para desenvolver o projeto de uma 
-              piscina de ondas. Mesmo sem experiência nesse tipo de obra, eles enxergaram na oportunidade um convite para crescer — e 
-              aceitaram o desafio.
+              A partir daí, ele buscou parcerias e contatos com especialistas na área, adquirindo conhecimento técnico e desenvolvendo soluções inovadoras. Embora aquele primeiro projeto não tenha saído do papel, ele abriu portas: uma empresa referência em equipamentos aquáticos passou a indicar a Partum para novos empreendimentos do setor. Assim, Paulo e sua equipe começaram a atuar em projetos e obras de piscinas por todo o Brasil – e logo expandiram seu portfólio para incluir também áreas infantis e play kids.
             </p>
             <p className='about-details-text'>
-              A partir daí, buscaram parcerias e contatos com especialistas na área, adquirindo conhecimento técnico e 
-              desenvolvendo soluções inovadoras. Embora aquele primeiro projeto não tenha saído do papel, ele abriu portas: uma empresa referência em 
-              equipamentos aquáticos passou a indicar a Partum para novos projetos do setor. Assim, os engenheiros 
-              começaram a atuar em projetos e obras de piscinas por todo o Brasil — e logo expandiram seu portfólio para 
-              incluir também áreas infantis e play kids.
+              O primeiro grande projeto de um parque aquático completo veio com o Parque Isla Cancún. Depois dele, vieram outros nomes de peso, como o Aqualand e o Guará Park, consolidando a Partum como uma empresa especializada em projetos e obras para parques aquáticos e resorts de excelência.
             </p>
             <p className='about-details-text'>
-              O primeiro grande projeto de um parque aquático completo veio com o Parque Isla Cancún. Depois dele, vieram 
-              outros nomes de peso, como o Aqualand e o Guará Park, consolidando a Partum como uma empresa 
-              especializada em projetos e obras para parques aquáticos e resorts.
+              À medida que a empresa ganhava destaque, assumia projetos de maior envergadura e a demanda por gestão de obras complexas crescia, Paulo identificou a necessidade de um parceiro estratégico, alguém com vasta experiência em empreendimentos de grande porte. Foi então que Eduardo, um engenheiro com um currículo sólido em construções de shoppings centers e hipermercados, forjado em grandes construtoras do país, juntou-se à Partum. Paulo, reconhecendo o valor inestimável dessa expertise, o convidou para ser sócio, solidificando uma parceria que seria a base para escalar ainda mais o sucesso da empresa.
             </p>
             <p className='about-details-text'>
-              Hoje, a Partum Engenharia é reconhecida por desenvolver empreendimentos completos, do conceito ao projeto 
-              executivo, unindo técnica, criatividade e paixão pelo que faz. Entre seus grandes desafios atuais está o Vale das Minas Park, o maior parque aquático do Norte do Brasil, um 
-              marco que simboliza o quanto a Partum cresceu e o quanto ainda está pronta para conquistar.
+              Hoje, a Partum Engenharia é reconhecida por desenvolver empreendimentos completos, do conceito ao projeto executivo, unindo técnica, criatividade e uma paixão inabalável pelo que faz. Entre seus grandes desafios atuais está o Vale das Minas Park, o maior parque aquático do Norte do Brasil, e o Guará Forest Resort o Maior Resort de Floresta do Brasil, um marco que simboliza o quanto a Partum cresceu e o quanto ainda está pronta para conquistar novos horizontes.
             </p>
           </div>
 
