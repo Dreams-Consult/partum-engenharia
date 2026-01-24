@@ -76,11 +76,37 @@ function Contact() {
     }
   }
 
+  const formatPhoneNumber = (value: string) => {
+    // Remove todos os caracteres não numéricos
+    const phoneNumber = value.replace(/\D/g, '')
+    
+    // Aplica a máscara baseada no tamanho do número
+    if (phoneNumber.length <= 2) {
+      return phoneNumber
+    } else if (phoneNumber.length <= 6) {
+      return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2)}`
+    } else if (phoneNumber.length <= 10) {
+      return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2, 6)}-${phoneNumber.slice(6)}`
+    } else {
+      return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2, 7)}-${phoneNumber.slice(7, 11)}`
+    }
+  }
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
+    const { name, value } = e.target
+    
+    if (name === 'phone') {
+      const formattedPhone = formatPhoneNumber(value)
+      setFormData({
+        ...formData,
+        phone: formattedPhone
+      })
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value
+      })
+    }
   }
 
   return (
@@ -121,6 +147,7 @@ function Contact() {
                 onChange={handleChange}
                 required
                 placeholder='Seu Telefone'
+                maxLength={15}
               />
             </div>
 
