@@ -358,3 +358,33 @@
     font-size: 0.8rem;
   }
 }
+
+/* Botão CTA */
+.projects-cta-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.projects-cta-button {
+  background: #5eb3e4;
+  color: #fff;
+  padding: 18px 50px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(94, 179, 228, 0.3);
+}
+
+.projects-cta-button:hover {
+  background: #4a9fce;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(94, 179, 228, 0.4);
+}
+
+.projects-cta-button:active {
+  transform: translateY(0);
+}

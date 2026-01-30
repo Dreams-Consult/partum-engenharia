@@ -37,6 +37,13 @@ function Projects() {
     navigate(`/projeto/${slug}`)
   }
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className='projects-section' id='projects'>
       <div className='projects-container'>
@@ -117,6 +124,16 @@ function Projects() {
           </button>
           
           <div className='custom-dots-container'></div>
+        </div>
+        
+        <div className='projects-cta-container'>
+          <button 
+            className='projects-cta-button'
+            onClick={scrollToContact}
+            type='button'
+          >
+            Solicite um projeto
+          </button>
         </div>
       </div>
     </section>
