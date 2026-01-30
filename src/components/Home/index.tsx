@@ -7,6 +7,20 @@ import arrowLeft from '../../assets/SVG/ICON-SETA-ESQUERDA.svg'
 import arrowRight from '../../assets/SVG/ICON-SETA-DIREITA.svg'
 import siteConfig from '../../data/siteConfig.json'
 
+// Importação das imagens do banner
+import bannerSite from '../../assets/banner-site.png'
+import bannerSite1 from '../../assets/banner-site-1.jpg'
+import bannerSite2 from '../../assets/banner-site-2.jpg'
+import bannerSite3 from '../../assets/banner-site-3.jpg'
+
+// Mapeamento de nomes de arquivos para imports
+const bannerImages: Record<string, string> = {
+  'banner-site.png': bannerSite,
+  'banner-site-1.jpg': bannerSite1,
+  'banner-site-2.jpg': bannerSite2,
+  'banner-site-3.jpg': bannerSite3
+}
+
 function Home() {
   const [bannerOpacity, setBannerOpacity] = useState(1)
 
@@ -47,7 +61,7 @@ function Home() {
             <div 
               className="home-section"
               style={{
-                backgroundImage: `url(/src/assets/${slide.image})`
+                backgroundImage: `url(${bannerImages[slide.image] || ''})`
               }}
             >
               <div className="home-overlay" />
