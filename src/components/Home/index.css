@@ -68,26 +68,6 @@
   padding: 0 80px;
 }
 
-/* Slide 1 - Banner 1 */
-.slide-original {
-  background-image: url('../../assets/banner-site.png');
-}
-
-/* Slide 2 - Banner 2 */
-.slide-2 {
-  background-image: url('../../assets/banner-site-2.jpg');
-}
-
-/* Slide 3 - Banner 3 */
-.slide-3 {
-  background-image: url('../../assets/banner-site-3.jpg');
-}
-
-/* Slide 4 - Banner 4 */
-.slide-4 {
-  background-image: url('../../assets/banner-site-1.jpg');
-}
-
 .home-overlay {
   position: absolute;
   top: 0;

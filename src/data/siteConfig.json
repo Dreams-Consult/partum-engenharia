@@ -1,4 +1,36 @@
 {
+  "banner": {
+    "slides": [
+      {
+        "id": "slide-1",
+        "image": "banner-site-1.jpg",
+        "welcome": "",
+        "title": "Projetamos o futuro do lazer no Brasil.",
+        "subtitle": "Descubra o que podemos construir juntos"
+      },
+      {
+        "id": "slide-2",
+        "image": "banner-site.png",
+        "welcome": "",
+        "title": "Excelência em Engenharia",
+        "subtitle": "Transformamos sonhos em realidade com projetos inovadores"
+      },
+      {
+        "id": "slide-3",
+        "image": "banner-site-3.jpg",
+        "welcome": "",
+        "title": "Especialistas em Parques Aquáticos",
+        "subtitle": "Criando experiências inesquecíveis com segurança e inovação"
+      },
+      {
+        "id": "slide-4",
+        "image": "banner-site-2.jpg",
+        "welcome": "",
+        "title": "Projetos de Resorts de Luxo",
+        "subtitle": "Soluções personalizadas com os mais altos padrões de qualidade"
+      }
+    ]
+  },
   "contact": {
     "email": "contato@partumengenharia.com.br",
     "phone": "(17) 99654-2563",

@@ -3,39 +3,9 @@ import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
-import type { CarouselSlide } from '../../types'
 import arrowLeft from '../../assets/SVG/ICON-SETA-ESQUERDA.svg'
 import arrowRight from '../../assets/SVG/ICON-SETA-DIREITA.svg'
-const CAROUSEL_SLIDES: CarouselSlide[] = [
-  {
-    id: 'slide-1',
-    className: 'slide-original',
-    welcome: '',
-    title: 'Projetamos o futuro do lazer no Brasil.',
-    subtitle: 'Descubra o que podemos construir juntos'
-  },
-  {
-    id: 'slide-2',
-    className: 'slide-2',
-    welcome: '',
-    title: 'Excelência em Engenharia',
-    subtitle: 'Transformamos sonhos em realidade com projetos inovadores'
-  },
-  {
-    id: 'slide-3',
-    className: 'slide-3',
-    welcome: '',
-    title: 'Especialistas em Parques Aquáticos',
-    subtitle: 'Criando experiências inesquecíveis com segurança e inovação'
-  },
-  {
-    id: 'slide-4',
-    className: 'slide-4',
-    welcome: '',
-    title: 'Projetos de Resorts de Luxo',
-    subtitle: 'Soluções personalizadas com os mais altos padrões de qualidade'
-  }
-]
+import siteConfig from '../../data/siteConfig.json'
 
 function Home() {
   const [bannerOpacity, setBannerOpacity] = useState(1)
@@ -72,9 +42,14 @@ function Home() {
         speed={800}
         className="home-carousel"
       >
-        {CAROUSEL_SLIDES.map(slide => (
+        {siteConfig.banner.slides.map(slide => (
           <SwiperSlide key={slide.id}>
-            <div className={`home-section ${slide.className}`}>
+            <div 
+              className="home-section"
+              style={{
+                backgroundImage: `url(/src/assets/${slide.image})`
+              }}
+            >
               <div className="home-overlay" />
               <div className="home-content">
                 {slide.welcome && <h3 className="home-welcome">{slide.welcome}</h3>}
