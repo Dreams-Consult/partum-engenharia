@@ -3,6 +3,14 @@ import { useState, type FormEvent } from 'react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import siteConfig from '../../data/siteConfig.json'
 
+// Declarações de tipo para tracking
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void
+    fbq?: (...args: any[]) => void
+  }
+}
+
 const CONTACT_TITLE = 'Contato'
 const CONTACT_DESCRIPTION = 'Preencha o formulário e entre em contato e receba um atendimento especializado para o seu projeto.\n\nOu entre em contato pelo whatsapp'
 
@@ -59,6 +67,26 @@ function Contact() {
         })
         // Adiciona parâmetro de conversão na URL para tracking de marketing
         window.history.pushState(null, '', '?cadastrado=sucesso')
+        
+        // Dispara eventos de conversão para Google Ads e Facebook Pixel
+        if (typeof window !== 'undefined') {
+          // Google Ads Conversion
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'conversion', {
+              'send_to': 'AW-922400128',
+              'event_category': 'form',
+              'event_label': 'contact_form_submission'
+            })
+          }
+          
+          // Facebook Pixel Event
+          if (typeof window.fbq === 'function') {
+            window.fbq('track', 'Lead', {
+              content_name: 'Contact Form',
+              content_category: 'Form Submission'
+            })
+          }
+        }
       } else {
         setModalState({
           isOpen: true,
