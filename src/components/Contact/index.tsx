@@ -57,6 +57,8 @@ function Contact() {
           phone: '',
           message: ''
         })
+        // Adiciona parâmetro de conversão na URL para tracking de marketing
+        window.history.pushState(null, '', '?cadastrado=sucesso')
       } else {
         setModalState({
           isOpen: true,
@@ -196,7 +198,13 @@ function Contact() {
 
       {/* Modal de confirmação */}
       {modalState.isOpen && (
-        <div className='modal-overlay' onClick={() => setModalState({ ...modalState, isOpen: false })}>
+        <div className='modal-overlay' onClick={() => {
+          setModalState({ ...modalState, isOpen: false })
+          // Remove o parâmetro de conversão da URL ao fechar o popup
+          if (window.location.search.includes('cadastrado=sucesso')) {
+            window.history.replaceState(null, '', window.location.pathname + window.location.hash)
+          }
+        }}>
           <div className='modal-content' onClick={(e) => e.stopPropagation()}>
             <div className={`modal-icon ${modalState.type}`}>
               {modalState.type === 'success' ? (
@@ -215,7 +223,13 @@ function Contact() {
             <p className='modal-message'>{modalState.message}</p>
             <button 
               className='modal-button'
-              onClick={() => setModalState({ ...modalState, isOpen: false })}
+              onClick={() => {
+                setModalState({ ...modalState, isOpen: false })
+                // Remove o parâmetro de conversão da URL ao fechar o popup
+                if (window.location.search.includes('cadastrado=sucesso')) {
+                  window.history.replaceState(null, '', window.location.pathname + window.location.hash)
+                }
+              }}
             >
               Fechar
             </button>

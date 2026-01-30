@@ -16,6 +16,16 @@ const getImageUrl = (path: string): string => {
   return imageUrl || path
 }
 
+// Função para gerar slug a partir do nome do projeto
+const generateSlug = (name: string): string => {
+  return name
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+}
+
 function ProjectDetails() {
   const { id } = useParams()
   const navigate = useNavigate()
@@ -38,7 +48,7 @@ function ProjectDetails() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [id])
 
-  const project = pageData.projects.find(p => p.id === Number(id))
+  const project = pageData.projects.find(p => generateSlug(p.name) === id)
 
   if (!project) {
     return (

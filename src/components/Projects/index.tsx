@@ -18,12 +18,23 @@ const getImageUrl = (path: string): string => {
   return imageUrl || path
 }
 
+// Função para gerar slug a partir do nome do projeto
+const generateSlug = (name: string): string => {
+  return name
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+}
+
 function Projects() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 })
   const navigate = useNavigate()
 
-  const handleProjectClick = (projectId: number) => {
-    navigate(`/projeto/${projectId}`)
+  const handleProjectClick = (projectName: string) => {
+    const slug = generateSlug(projectName)
+    navigate(`/projeto/${slug}`)
   }
 
   return (
@@ -76,7 +87,7 @@ function Projects() {
               <SwiperSlide key={project.id}>
                 <div 
                   className='project-card' 
-                  onClick={() => handleProjectClick(project.id)}
+                  onClick={() => handleProjectClick(project.name)}
                   style={{ cursor: 'pointer' }}
                 >
                   <div

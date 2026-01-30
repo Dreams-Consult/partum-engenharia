@@ -27,10 +27,12 @@ function Topbar() {
         // Aguarda navegação e depois rola para o topo
         setTimeout(() => {
           window.scrollTo({ top: 0, behavior: 'smooth' })
+          window.history.replaceState(null, '', '/')
         }, 100)
       } else {
         // Já está na home, apenas rola para o topo
         window.scrollTo({ top: 0, behavior: 'smooth' })
+        window.history.replaceState(null, '', '/')
       }
       return
     }
@@ -43,6 +45,7 @@ function Topbar() {
         const element = document.getElementById(sectionId)
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' })
+          window.history.replaceState(null, '', `/#${sectionId}`)
         }
       }, 100)
     } else {
@@ -50,6 +53,7 @@ function Topbar() {
       const element = document.getElementById(sectionId)
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
+        window.history.replaceState(null, '', `/#${sectionId}`)
       }
     }
   }
